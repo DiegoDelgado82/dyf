@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+			<title>BARBARA</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="max-image-preview:large">
+<title>BARBARA</title>
+<link rel="alternate" type="application/rss+xml" title="Eventdate » Feed" href="https://eleve11.ar/feed/">
+<link rel="alternate" type="application/rss+xml" title="Eventdate » Feed de los comentarios" href="https://eleve11.ar/comments/feed/">
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v9.6.1 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+							<script src="BARBARA/js" data-cfasync="false" data-wpfc-render="false" async=""></script>
+			<script data-cfasync="false" data-wpfc-render="false">
+				var mi_version = '9.6.1';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+								var MonsterInsightsDefaultLocations = {"page_location":"https:\/\/eleve11.ar\/misquince\/ambar-8\/","page_referrer":"https:\/\/eleve11.ar\/misquince\/page\/3\/"};
+								if ( typeof MonsterInsightsPrivacyGuardFilter === 'function' ) {
+					var MonsterInsightsLocations = (typeof MonsterInsightsExcludeQuery === 'object') ? MonsterInsightsPrivacyGuardFilter( MonsterInsightsExcludeQuery ) : MonsterInsightsPrivacyGuardFilter( MonsterInsightsDefaultLocations );
+				} else {
+					var MonsterInsightsLocations = (typeof MonsterInsightsExcludeQuery === 'object') ? MonsterInsightsExcludeQuery : MonsterInsightsDefaultLocations;
+				}
+
+								var disableStrs = [
+										'ga-disable-G-KJ84R0QK17',
+									];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						if (document.cookie.indexOf(disableStrs[index] + '=true') > -1) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if (__gtagTrackerIsOptedOut()) {
+					for (var index = 0; index < disableStrs.length; index++) {
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						document.cookie = disableStrs[index] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				if ('undefined' === typeof gaOptout) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.MonsterInsightsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if (mi_track_user) {
+					function __gtagDataLayer() {
+						dataLayer.push(arguments);
+					}
+
+					function __gtagTracker(type, name, parameters) {
+						if (!parameters) {
+							parameters = {};
+						}
+
+						if (parameters.send_to) {
+							__gtagDataLayer.apply(null, arguments);
+							return;
+						}
+
+						if (type === 'event') {
+														parameters.send_to = monsterinsights_frontend.v4_id;
+							var hookName = name;
+							if (typeof parameters['event_category'] !== 'undefined') {
+								hookName = parameters['event_category'] + ':' + name;
+							}
+
+							if (typeof MonsterInsightsDualTracker.trackers[hookName] !== 'undefined') {
+								MonsterInsightsDualTracker.trackers[hookName](parameters);
+							} else {
+								__gtagDataLayer('event', name, parameters);
+							}
+							
+						} else {
+							__gtagDataLayer.apply(null, arguments);
+						}
+					}
+
+					__gtagTracker('js', new Date());
+					__gtagTracker('set', {
+						'developer_id.dZGIzZG': true,
+											});
+					if ( MonsterInsightsLocations.page_location ) {
+						__gtagTracker('set', MonsterInsightsLocations);
+					}
+										__gtagTracker('config', 'G-KJ84R0QK17', {"forceSSL":"true","link_attribution":"true"} );
+															window.gtag = __gtagTracker;										(function () {
+						/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+						/* ga and __gaTracker compatibility shim. */
+						var noopfn = function () {
+							return null;
+						};
+						var newtracker = function () {
+							return new Tracker();
+						};
+						var Tracker = function () {
+							return null;
+						};
+						var p = Tracker.prototype;
+						p.get = noopfn;
+						p.set = noopfn;
+						p.send = function () {
+							var args = Array.prototype.slice.call(arguments);
+							args.unshift('send');
+							__gaTracker.apply(null, args);
+						};
+						var __gaTracker = function () {
+							var len = arguments.length;
+							if (len === 0) {
+								return;
+							}
+							var f = arguments[len - 1];
+							if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') {
+								if ('send' === arguments[0]) {
+									var hitConverted, hitObject = false, action;
+									if ('event' === arguments[1]) {
+										if ('undefined' !== typeof arguments[3]) {
+											hitObject = {
+												'eventAction': arguments[3],
+												'eventCategory': arguments[2],
+												'eventLabel': arguments[4],
+												'value': arguments[5] ? arguments[5] : 1,
+											}
+										}
+									}
+									if ('pageview' === arguments[1]) {
+										if ('undefined' !== typeof arguments[2]) {
+											hitObject = {
+												'eventAction': 'page_view',
+												'page_path': arguments[2],
+											}
+										}
+									}
+									if (typeof arguments[2] === 'object') {
+										hitObject = arguments[2];
+									}
+									if (typeof arguments[5] === 'object') {
+										Object.assign(hitObject, arguments[5]);
+									}
+									if ('undefined' !== typeof arguments[1].hitType) {
+										hitObject = arguments[1];
+										if ('pageview' === hitObject.hitType) {
+											hitObject.eventAction = 'page_view';
+										}
+									}
+									if (hitObject) {
+										action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+										hitConverted = mapArgs(hitObject);
+										__gtagTracker('event', action, hitConverted);
+									}
+								}
+								return;
+							}
+
+							function mapArgs(args) {
+								var arg, hit = {};
+								var gaMap = {
+									'eventCategory': 'event_category',
+									'eventAction': 'event_action',
+									'eventLabel': 'event_label',
+									'eventValue': 'event_value',
+									'nonInteraction': 'non_interaction',
+									'timingCategory': 'event_category',
+									'timingVar': 'name',
+									'timingValue': 'value',
+									'timingLabel': 'event_label',
+									'page': 'page_path',
+									'location': 'page_location',
+									'title': 'page_title',
+									'referrer' : 'page_referrer',
+								};
+								for (arg in args) {
+																		if (!(!args.hasOwnProperty(arg) || !gaMap.hasOwnProperty(arg))) {
+										hit[gaMap[arg]] = args[arg];
+									} else {
+										hit[arg] = args[arg];
+									}
+								}
+								return hit;
+							}
+
+							try {
+								f.hitCallback();
+							} catch (ex) {
+							}
+						};
+						__gaTracker.create = newtracker;
+						__gaTracker.getByName = newtracker;
+						__gaTracker.getAll = function () {
+							return [];
+						};
+						__gaTracker.remove = noopfn;
+						__gaTracker.loaded = true;
+						window['__gaTracker'] = __gaTracker;
+					})();
+									} else {
+										console.log("");
+					(function () {
+						function __gtagTracker() {
+							return null;
+						}
+
+						window['__gtagTracker'] = __gtagTracker;
+						window['gtag'] = __gtagTracker;
+					})();
+									}
+			</script>
+				<!-- / Google Analytics by MonsterInsights -->
+		<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/eleve11.ar\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.1"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<link rel="stylesheet" id="dce-animations-css" href="BARBARA/animations.css" media="all">
+<link rel="stylesheet" id="bdt-uikit-css" href="BARBARA/bdt-uikit.css" media="all">
+<link rel="stylesheet" id="ep-helper-css" href="BARBARA/ep-helper.css" media="all">
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,161;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px;--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{clip:rect(1px,1px,1px,1px);word-wrap:normal!important;border:0;-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{clip:auto!important;background-color:#ddd;-webkit-clip-path:none;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+</style>
+<link rel="stylesheet" id="jet-engine-frontend-css" href="BARBARA/frontend.css" media="all">
+<style id="global-styles-inline-css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--foreground: #000000;--wp--preset--color--background: #ffffff;--wp--preset--color--primary: #1a4548;--wp--preset--color--secondary: #ffe2c7;--wp--preset--color--tertiary: #F6F6F6;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--gradient--vertical-secondary-to-tertiary: linear-gradient(to bottom,var(--wp--preset--color--secondary) 0%,var(--wp--preset--color--tertiary) 100%);--wp--preset--gradient--vertical-secondary-to-background: linear-gradient(to bottom,var(--wp--preset--color--secondary) 0%,var(--wp--preset--color--background) 100%);--wp--preset--gradient--vertical-tertiary-to-background: linear-gradient(to bottom,var(--wp--preset--color--tertiary) 0%,var(--wp--preset--color--background) 100%);--wp--preset--gradient--diagonal-primary-to-foreground: linear-gradient(to bottom right,var(--wp--preset--color--primary) 0%,var(--wp--preset--color--foreground) 100%);--wp--preset--gradient--diagonal-secondary-to-background: linear-gradient(to bottom right,var(--wp--preset--color--secondary) 50%,var(--wp--preset--color--background) 50%);--wp--preset--gradient--diagonal-background-to-secondary: linear-gradient(to bottom right,var(--wp--preset--color--background) 50%,var(--wp--preset--color--secondary) 50%);--wp--preset--gradient--diagonal-tertiary-to-background: linear-gradient(to bottom right,var(--wp--preset--color--tertiary) 50%,var(--wp--preset--color--background) 50%);--wp--preset--gradient--diagonal-background-to-tertiary: linear-gradient(to bottom right,var(--wp--preset--color--background) 50%,var(--wp--preset--color--tertiary) 50%);--wp--preset--font-size--small: 1rem;--wp--preset--font-size--medium: 1.125rem;--wp--preset--font-size--large: 1.75rem;--wp--preset--font-size--x-large: clamp(1.75rem, 3vw, 2.25rem);--wp--preset--font-family--system-font: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;--wp--preset--font-family--source-serif-pro: "Source Serif Pro", serif;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);--wp--custom--spacing--small: max(1.25rem, 5vw);--wp--custom--spacing--medium: clamp(2rem, 8vw, calc(4 * var(--wp--style--block-gap)));--wp--custom--spacing--large: clamp(4rem, 10vw, 8rem);--wp--custom--spacing--outer: var(--wp--custom--spacing--small, 1.25rem);--wp--custom--typography--font-size--huge: clamp(2.25rem, 4vw, 2.75rem);--wp--custom--typography--font-size--gigantic: clamp(2.75rem, 6vw, 3.25rem);--wp--custom--typography--font-size--colossal: clamp(3.25rem, 8vw, 6.25rem);--wp--custom--typography--line-height--tiny: 1.15;--wp--custom--typography--line-height--small: 1.2;--wp--custom--typography--line-height--medium: 1.4;--wp--custom--typography--line-height--normal: 1.6;}body { margin: 0;--wp--style--global--content-size: 650px;--wp--style--global--wide-size: 1000px; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 1.5rem; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child:first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child:last-child { margin-block-end: 0; }body { --wp--style--block-gap: 1.5rem; }:where(body .is-layout-flow)  > :first-child:first-child{margin-block-start: 0;}:where(body .is-layout-flow)  > :last-child:last-child{margin-block-end: 0;}:where(body .is-layout-flow)  > *{margin-block-start: 1.5rem;margin-block-end: 0;}:where(body .is-layout-constrained)  > :first-child:first-child{margin-block-start: 0;}:where(body .is-layout-constrained)  > :last-child:last-child{margin-block-end: 0;}:where(body .is-layout-constrained)  > *{margin-block-start: 1.5rem;margin-block-end: 0;}:where(body .is-layout-flex) {gap: 1.5rem;}:where(body .is-layout-grid) {gap: 1.5rem;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}body{background-color: var(--wp--preset--color--background);color: var(--wp--preset--color--foreground);font-family: var(--wp--preset--font-family--system-font);font-size: var(--wp--preset--font-size--medium);font-style: normal;font-weight: 400;line-height: var(--wp--custom--typography--line-height--normal);padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){color: var(--wp--preset--color--foreground);text-decoration: underline;}h1{font-family: var(--wp--preset--font-family--source-serif-pro);font-size: var(--wp--custom--typography--font-size--colossal);font-weight: 300;line-height: var(--wp--custom--typography--line-height--tiny);}h2{font-family: var(--wp--preset--font-family--source-serif-pro);font-size: var(--wp--custom--typography--font-size--gigantic);font-weight: 300;line-height: var(--wp--custom--typography--line-height--small);}h3{font-family: var(--wp--preset--font-family--source-serif-pro);font-size: var(--wp--custom--typography--font-size--huge);font-weight: 300;line-height: var(--wp--custom--typography--line-height--tiny);}h4{font-family: var(--wp--preset--font-family--source-serif-pro);font-size: var(--wp--preset--font-size--x-large);font-weight: 300;line-height: var(--wp--custom--typography--line-height--tiny);}h5{font-family: var(--wp--preset--font-family--system-font);font-size: var(--wp--preset--font-size--medium);font-weight: 700;line-height: var(--wp--custom--typography--line-height--normal);text-transform: uppercase;}h6{font-family: var(--wp--preset--font-family--system-font);font-size: var(--wp--preset--font-size--medium);font-weight: 400;line-height: var(--wp--custom--typography--line-height--normal);text-transform: uppercase;}.wp-element-button, .wp-block-button__link{background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-foreground-color{color: var(--wp--preset--color--foreground) !important;}.has-background-color{color: var(--wp--preset--color--background) !important;}.has-primary-color{color: var(--wp--preset--color--primary) !important;}.has-secondary-color{color: var(--wp--preset--color--secondary) !important;}.has-tertiary-color{color: var(--wp--preset--color--tertiary) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-foreground-background-color{background-color: var(--wp--preset--color--foreground) !important;}.has-background-background-color{background-color: var(--wp--preset--color--background) !important;}.has-primary-background-color{background-color: var(--wp--preset--color--primary) !important;}.has-secondary-background-color{background-color: var(--wp--preset--color--secondary) !important;}.has-tertiary-background-color{background-color: var(--wp--preset--color--tertiary) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-foreground-border-color{border-color: var(--wp--preset--color--foreground) !important;}.has-background-border-color{border-color: var(--wp--preset--color--background) !important;}.has-primary-border-color{border-color: var(--wp--preset--color--primary) !important;}.has-secondary-border-color{border-color: var(--wp--preset--color--secondary) !important;}.has-tertiary-border-color{border-color: var(--wp--preset--color--tertiary) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-vertical-secondary-to-tertiary-gradient-background{background: var(--wp--preset--gradient--vertical-secondary-to-tertiary) !important;}.has-vertical-secondary-to-background-gradient-background{background: var(--wp--preset--gradient--vertical-secondary-to-background) !important;}.has-vertical-tertiary-to-background-gradient-background{background: var(--wp--preset--gradient--vertical-tertiary-to-background) !important;}.has-diagonal-primary-to-foreground-gradient-background{background: var(--wp--preset--gradient--diagonal-primary-to-foreground) !important;}.has-diagonal-secondary-to-background-gradient-background{background: var(--wp--preset--gradient--diagonal-secondary-to-background) !important;}.has-diagonal-background-to-secondary-gradient-background{background: var(--wp--preset--gradient--diagonal-background-to-secondary) !important;}.has-diagonal-tertiary-to-background-gradient-background{background: var(--wp--preset--gradient--diagonal-tertiary-to-background) !important;}.has-diagonal-background-to-tertiary-gradient-background{background: var(--wp--preset--gradient--diagonal-background-to-tertiary) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-system-font-font-family{font-family: var(--wp--preset--font-family--system-font) !important;}.has-source-serif-pro-font-family{font-family: var(--wp--preset--font-family--source-serif-pro) !important;}
+</style>
+<style id="wp-block-template-skip-link-inline-css">
+
+		.skip-link.screen-reader-text {
+			border: 0;
+			clip: rect(1px,1px,1px,1px);
+			clip-path: inset(50%);
+			height: 1px;
+			margin: -1px;
+			overflow: hidden;
+			padding: 0;
+			position: absolute !important;
+			width: 1px;
+			word-wrap: normal !important;
+		}
+
+		.skip-link.screen-reader-text:focus {
+			background-color: #eee;
+			clip: auto !important;
+			clip-path: none;
+			color: #444;
+			display: block;
+			font-size: 1em;
+			height: auto;
+			left: 5px;
+			line-height: normal;
+			padding: 15px 23px 14px;
+			text-decoration: none;
+			top: 5px;
+			width: auto;
+			z-index: 100000;
+		}
+</style>
+<link rel="stylesheet" id="twentytwentytwo-style-css" href="BARBARA/style_002.css" media="all">
+<link rel="stylesheet" id="jet-elements-css" href="BARBARA/jet-elements.css" media="all">
+<link rel="stylesheet" id="jet-elements-skin-css" href="BARBARA/jet-elements-skin.css" media="all">
+<link rel="stylesheet" id="elementor-icons-css" href="BARBARA/elementor-icons.min.css" media="all">
+<link rel="stylesheet" id="elementor-frontend-css" href="BARBARA/frontend-lite.min.css" media="all">
+<style id="elementor-frontend-inline-css">
+.elementor-3854 .elementor-element.elementor-element-21fd83a:not(.elementor-motion-effects-element-type-background), .elementor-3854 .elementor-element.elementor-element-21fd83a > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:url("\BARBI\bannersb\arbara.jpeg");}
+</style>
+<link rel="stylesheet" id="swiper-css" href="BARBARA/swiper.min.css" media="all">
+<link rel="stylesheet" id="elementor-post-4-css" href="BARBARA/post-4.css" media="all">
+<link rel="stylesheet" id="dce-style-css" href="BARBARA/style.min.css" media="all">
+<link rel="stylesheet" id="dashicons-css" href="BARBARA/dashicons.min.css" media="all">
+<link rel="stylesheet" id="elementor-pro-css" href="BARBARA/frontend-lite.min_002.css" media="all">
+<link rel="stylesheet" id="jet-tabs-frontend-css" href="BARBARA/jet-tabs-frontend.css" media="all">
+<link rel="stylesheet" id="font-awesome-5-all-css" href="BARBARA/all.min.css" media="all">
+<link rel="stylesheet" id="font-awesome-4-shim-css" href="BARBARA/v4-shims.min.css" media="all">
+<link rel="stylesheet" id="wpdt-elementor-widget-font-css" href="BARBARA/style.css" media="all">
+<link rel="stylesheet" id="elementor-global-css" href="BARBARA/global.css" media="all">
+<link rel="stylesheet" id="elementor-post-42098-css" href="BARBARA/post-42098.css" media="all">
+<link rel="stylesheet" id="elementor-post-1715-css" href="BARBARA/post-1715.css" media="all">
+<link rel="stylesheet" id="elementor-post-3854-css" href="BARBARA/post-3854.css" media="all">
+<link rel="stylesheet" id="google-fonts-1-css" href="BARBARA/css.css" media="all">
+<link rel="stylesheet" id="elementor-icons-shared-0-css" href="BARBARA/fontawesome.min.css" media="all">
+<link rel="stylesheet" id="elementor-icons-fa-solid-css" href="BARBARA/solid.min.css" media="all">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""><script src="BARBARA/frontend-gtag.min.js" id="monsterinsights-frontend-script-js" async="" data-wp-strategy="async"></script>
+<script data-cfasync="false" data-wpfc-render="false" id="monsterinsights-frontend-script-js-extra">var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/eleve11.ar","hash_tracking":"false","v4_id":"G-KJ84R0QK17"};</script>
+<script src="BARBARA/jquery.min.js" id="jquery-core-js"></script>
+<script src="BARBARA/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+<script src="BARBARA/v4-shims.min.js" id="font-awesome-4-shim-js"></script>
+<link rel="https://api.w.org/" href="https://eleve11.ar/wp-json/"><link rel="alternate" type="application/json" href="https://eleve11.ar/wp-json/wp/v2/misquince/179794"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://eleve11.ar/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.8.1">
+<link rel="canonical" href="https://eleve11.ar/misquince/ambar-8/">
+<link rel="shortlink" href="https://eleve11.ar/?p=179794">
+<link rel="alternate" type="application/json+oembed" href="https://eleve11.ar/wp-json/oembed/1.0/embed?url=https%3A%2F%2Feleve11.ar%2Fmisquince%2Fambar-8%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://eleve11.ar/wp-json/oembed/1.0/embed?url=https%3A%2F%2Feleve11.ar%2Fmisquince%2Fambar-8%2F&amp;format=xml">
+<meta name="cdp-version" content="1.4.5"><meta name="generator" content="Elementor 3.19.1; features: e_optimized_assets_loading, e_optimized_css_loading, additional_custom_breakpoints, block_editor_assets_optimize, e_image_loading_optimization; settings: css_print_method-external, google_font-enabled, font_display-auto">
+<style id="wp-fonts-local">
+@font-face{font-family:"Source Serif Pro";font-style:normal;font-weight:200 900;font-display:fallback;src:url('https://eleve11.ar/wp-content/themes/twentytwentytwo/assets/fonts/source-serif-pro/SourceSerif4Variable-Roman.ttf.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:"Source Serif Pro";font-style:italic;font-weight:200 900;font-display:fallback;src:url('https://eleve11.ar/wp-content/themes/twentytwentytwo/assets/fonts/source-serif-pro/SourceSerif4Variable-Italic.ttf.woff2') format('woff2');font-stretch:normal;}
+</style>
+<link rel="icon" href="https://eleve11.ar/wp-content/uploads/2023/04/cropped-FAVICON-02-1-1-32x32.png" sizes="32x32">
+<link rel="icon" href="https://eleve11.ar/wp-content/uploads/2023/04/cropped-FAVICON-02-1-1-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://eleve11.ar/wp-content/uploads/2023/04/cropped-FAVICON-02-1-1-180x180.png">
+<meta name="msapplication-TileImage" content="https://eleve11.ar/wp-content/uploads/2023/04/cropped-FAVICON-02-1-1-270x270.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><script src="BARBARA/wp-emoji-release.min.js" defer="defer"></script></head>
+<body class="misquince-template-default single single-misquince postid-179794 wp-embed-responsive elementor-default elementor-template-canvas elementor-kit-4 elementor-page-3854 e--ua-firefox" data-elementor-device-mode="desktop">
+			<div data-elementor-type="single-post" data-elementor-id="3854" data-post-id="179794" data-obj-id="179794" class="elementor elementor-3854 dce-elementor-post-179794 elementor-location-single post-179794 misquince type-misquince status-publish hentry template-quince-spring">
+		<div class="elementor-section-wrap">
+					<section data-dce-background-overlay-color="#000000" data-dce-background-image-url="/BARBI/banners/barbara.jpeg" class="elementor-section elementor-top-section elementor-element elementor-element-21fd83a elementor-section-full_width elementor-section-height-min-height elementor-section-items-stretch elementor-section-content-middle elementor-section-height-default" data-id="21fd83a" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-b739ae6" data-id="b739ae6" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-48a75b2 elementor-widget__width-auto e-transform dce_masking-none elementor-widget elementor-widget-image animated slideInLeft" data-id="48a75b2" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInLeft&quot;,&quot;_transform_scaleX_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scaleX_effect_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scaleX_effect_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scaleY_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scaleY_effect_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scaleY_effect_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.19.0 - 05-02-2024 */
+.elementor-widget-image{text-align:center}.elementor-widget-image a{display:inline-block}.elementor-widget-image a img[src$=".svg"]{width:48px}.elementor-widget-image img{vertical-align:middle;display:inline-block}</style>										<img width="351" height="532" src="BARBARA/flor-uno-1.png" class="attachment-large size-large wp-image-3870" alt="" srcset="BARBARA/flor-uno-1.png 351w, BARBARA/flor-uno-1-198x300.png 198w" sizes="(max-width: 351px) 100vw, 351px">													</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-ff2f713 animated fadeIn" data-id="ff2f713" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-1538f07 elementor-widget elementor-widget-jet-listing-dynamic-field" data-id="1538f07" data-element_type="widget" data-widget_type="jet-listing-dynamic-field.default">
+				<div class="elementor-widget-container">
+					<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<div class="jet-listing jet-listing-dynamic-field display-inline"><div class="jet-listing-dynamic-field__inline-wrap"><div class="jet-listing-dynamic-field__content">Bárbara</div></div></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-17afb4a elementor-widget elementor-widget-heading" data-id="17afb4a" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.19.0 - 05-02-2024 */
+.elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style><h2 class="elementor-heading-title elementor-size-default">MIS 15 AÑOS</h2>		</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-0eb0367 jedv-enabled--yes elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="0eb0367" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-1e4d35e" data-id="1e4d35e" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-c22052f elementor-widget elementor-widget-jet-listing-dynamic-field" data-id="c22052f" data-element_type="widget" data-widget_type="jet-listing-dynamic-field.default">
+				<div class="elementor-widget-container">
+			<div class="jet-listing jet-listing-dynamic-field display-inline"><div class="jet-listing-dynamic-field__inline-wrap"><div class="jet-listing-dynamic-field__content">23.11.2025</div></div></div>		</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-01527a5" data-id="01527a5" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-4e520c6 elementor-widget__width-auto elementor-absolute jedv-enabled--yes dce_masking-none elementor-widget elementor-widget-image animated slideInRight" data-id="4e520c6" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;slideInRight&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+													<img width="361" height="749" src="BARBARA/flor-2.png" class="attachment-large size-large wp-image-3868" alt="" srcset="BARBARA/flor-2.png 361w, BARBARA/flor-2-145x300.png 145w" sizes="(max-width: 361px) 100vw, 361px">													</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section data-dce-background-image-url="/barbara/asdqw.png" class="elementor-section elementor-top-section elementor-element elementor-element-41334ac elementor-section-height-min-height jedv-enabled--yes elementor-section-items-stretch elementor-section-boxed elementor-section-height-default" data-id="41334ac" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;none&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6b74485" data-id="6b74485" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-5e9a1fc elementor-widget elementor-widget-jet-countdown-timer" data-id="5e9a1fc" data-element_type="widget" data-widget_type="jet-countdown-timer.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-jet-countdown-timer jet-elements">
+<div class="jet-countdown-timer" data-type="due_date" data-due-date="1724544000">
+	<div class="jet-countdown-timer__item item-days">
+	<div class="jet-countdown-timer__item-value" data-value="days"><span class="jet-countdown-timer__digit">0</span><span class="jet-countdown-timer__digit">0</span></div>
+	<div class="jet-countdown-timer__item-label">DÍAS</div></div>
+	<div class="jet-countdown-timer__item item-hours">
+	<div class="jet-countdown-timer__item-value" data-value="hours"><span class="jet-countdown-timer__digit">0</span><span class="jet-countdown-timer__digit">0</span></div>
+	<div class="jet-countdown-timer__item-label">HRS</div></div>
+	<div class="jet-countdown-timer__item item-minutes">
+	<div class="jet-countdown-timer__item-value" data-value="minutes"><span class="jet-countdown-timer__digit">0</span><span class="jet-countdown-timer__digit">0</span></div>
+	<div class="jet-countdown-timer__item-label">MIN</div></div>
+	<div class="jet-countdown-timer__item item-seconds">
+	<div class="jet-countdown-timer__item-value" data-value="seconds"><span class="jet-countdown-timer__digit">0</span><span class="jet-countdown-timer__digit">0</span></div>
+	<div class="jet-countdown-timer__item-label">SEG</div></div>
+</div>
+
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-aedc1c4 elementor-align-center elementor-mobile-align-center elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-id="aedc1c4" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">AGENDAR LA FECHA</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section data-dce-background-color="#0f1e3d" class="elementor-section elementor-top-section elementor-element elementor-element-5d44c5a jedv-enabled--yes elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5d44c5a" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-66e686f" data-id="66e686f" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-3ccd115 elementor-widget elementor-widget-spacer" data-id="3ccd115" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.19.0 - 05-02-2024 */
+.elementor-column .elementor-spacer-inner{height:var(--spacer-size)}.e-con{--container-widget-width:100%}.e-con-inner>.elementor-widget-spacer,.e-con>.elementor-widget-spacer{width:var(--container-widget-width,var(--spacer-size));--align-self:var(--container-widget-align-self,initial);--flex-shrink:0}.e-con-inner>.elementor-widget-spacer>.elementor-widget-container,.e-con>.elementor-widget-spacer>.elementor-widget-container{height:100%;width:100%}.e-con-inner>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer,.e-con>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer{height:100%}.e-con-inner>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer>.elementor-spacer-inner,.e-con>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer>.elementor-spacer-inner{height:var(--container-widget-height,var(--spacer-size))}.e-con-inner>.elementor-widget-spacer.elementor-widget-empty,.e-con>.elementor-widget-spacer.elementor-widget-empty{position:relative;min-height:22px;min-width:22px}.e-con-inner>.elementor-widget-spacer.elementor-widget-empty .elementor-widget-empty-icon,.e-con>.elementor-widget-spacer.elementor-widget-empty .elementor-widget-empty-icon{position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;padding:0;width:22px;height:22px}</style>		<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section data-dce-background-overlay-color="#000000" data-dce-background-image-url="/BARBI/banners/barbara.jpeg" class="elementor-section elementor-top-section elementor-element elementor-element-2bf9906 jedv-enabled--yes elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2bf9906" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-23da708" data-id="23da708" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-9458629 elementor-widget elementor-widget-heading" data-id="9458629" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default"><p>Te 
+espero para compartir la alegría de una noche que será para mi mágica, 
+inolvidable, única y que sólo estará completa cuando te vea allí !</p>
+</h2>		</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-348a9a0 jedv-enabled--yes elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="348a9a0" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a302f1c" data-id="a302f1c" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-57480f2 dce_masking-none elementor-widget elementor-widget-image" data-id="57480f2" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+			<div class="dce-animations">										<img width="70" height="100" src="BARBARA/rfe.png" class="attachment-large size-large wp-image-3930" alt="">											</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-bae7875 elementor-widget elementor-widget-heading" data-id="bae7875" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Salón Don Quijote</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-ddf54fe elementor-widget elementor-widget-heading" data-id="ddf54fe" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">San Lorenzo 2482. San Martin</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-a8abe9b elementor-widget elementor-widget-jet-listing-dynamic-field" data-id="a8abe9b" data-element_type="widget" data-widget_type="jet-listing-dynamic-field.default">
+				<div class="elementor-widget-container">
+			<div class="jet-listing jet-listing-dynamic-field display-inline"><div class="jet-listing-dynamic-field__inline-wrap"><div class="jet-listing-dynamic-field__content">21:00 HS</div></div></div>		</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-95ac164 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="95ac164" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-05678c3" data-id="05678c3" data-element_type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-cde4c00" data-id="cde4c00" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-98fd08d dce_masking-none elementor-widget elementor-widget-image" data-id="98fd08d" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+													<img width="680" height="383" src="BARBARA/20221024_205910.jpg" class="attachment-large size-large wp-image-179800" alt="" srcset="BARBARA/20221024_205910.jpg 680w, BARBARA/20221024_205910-300x169.jpg 300w" sizes="(max-width: 680px) 100vw, 680px">													</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-e623573" data-id="e623573" data-element_type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+				<div class="elementor-element elementor-element-3b70858 elementor-align-center jedv-enabled--yes elementor-invisible elementor-widget elementor-widget-button" data-id="3b70858" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a class="elementor-button elementor-button-link elementor-size-sm" href="https://www.google.com/maps/place/Don+Quijote+Recepciones+-+Sal%C3%B3n+de+eventos/@-34.574007,-58.5454188,17z/data=!4m15!1m8!3m7!1s0x95bcb770004345d3:0xd285c79869d33e3c!2sSan+Lorenzo+2482,+San+Mart%C3%ADn,+Provincia+de+Buenos+Aires!3b1!8m2!3d-34.5739912!4d-58.5428661!16s%2Fg%2F11d_9h10v8!3m5!1s0x95bcb77001d191ed:0xa65526f0399f4c37!8m2!3d-34.57401!4d-58.542847!16s%2Fg%2F119ww2sw1?entry=ttu" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">VER UBICACIÓN</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section data-dce-background-image-url="/banners/FASQWD-1.png" class="elementor-section elementor-top-section elementor-element elementor-element-5367231 elementor-section-content-middle elementor-section-full_width jedv-enabled--yes elementor-section-height-default elementor-section-height-default elementor-invisible" data-id="5367231" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;slideInUp&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-fda0ad7" data-id="fda0ad7" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-a0a0d74 elementor-widget__width-auto elementor-absolute e-transform dce_masking-none elementor-invisible elementor-widget elementor-widget-image" data-id="a0a0d74" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_transform_scale_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:2,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.5,&quot;sizes&quot;:[]},&quot;_animation&quot;:&quot;slideInLeft&quot;,&quot;_transform_scale_effect_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+													<img width="524" height="420" src="BARBARA/fsdfsf.png" class="attachment-large size-large wp-image-3911" alt="" srcset="BARBARA/fsdfsf.png 524w, BARBARA/fsdfsf-300x240.png 300w" sizes="(max-width: 524px) 100vw, 524px">													</div>
+				</div>
+				<div class="elementor-element elementor-element-a64a69d elementor-widget elementor-widget-spacer" data-id="a64a69d" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+				<div data-dce-background-color="#0f1e3d" class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-bd4b466" data-id="bd4b466" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated e-swiper-container">
+						<div class="elementor-element elementor-element-6dbf34c dce_masking-none elementor-invisible elementor-widget elementor-widget-image" data-id="6dbf34c" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;jello&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+													<img width="100" height="90" src="BARBARA/fwefwefwe.png" class="attachment-large size-large wp-image-3915" alt="">													</div>
+				</div>
+				<div class="elementor-element elementor-element-1410e39 elementor-arrows-position-inside elementor-widget elementor-widget-image-carousel e-widget-swiper" data-id="1410e39" data-element_type="widget" data-settings="{&quot;slides_to_show&quot;:&quot;3&quot;,&quot;slides_to_scroll&quot;:&quot;1&quot;,&quot;navigation&quot;:&quot;arrows&quot;,&quot;autoplay_speed&quot;:3000,&quot;slides_to_show_mobile&quot;:&quot;1&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;infinite&quot;:&quot;yes&quot;,&quot;speed&quot;:500,&quot;image_spacing_custom&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:20,&quot;sizes&quot;:[]},&quot;image_spacing_custom_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="image-carousel.default" aria-roledescription="carousel" aria-label="Carrusel | Scroll horizontal: Flecha izquierda y derecha">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.19.0 - 05-02-2024 */
+.elementor-widget-image-carousel .swiper,.elementor-widget-image-carousel .swiper-container{position:static}.elementor-widget-image-carousel .swiper-container .swiper-slide figure,.elementor-widget-image-carousel .swiper .swiper-slide figure{line-height:inherit}.elementor-widget-image-carousel .swiper-slide{text-align:center}.elementor-image-carousel-wrapper:not(.swiper-container-initialized):not(.swiper-initialized) .swiper-slide{max-width:calc(100% / var(--e-image-carousel-slides-to-show, 3))}</style>		<div class="elementor-image-carousel-wrapper swiper-container swiper-container-initialized swiper-container-horizontal" dir="ltr">
+			<div class="elementor-image-carousel swiper-wrapper swiper-image-stretch" aria-live="off" style="transform: translate3d(-3621.33px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate" role="group" aria-roledescription="slide" aria-label="1 de 6" data-swiper-slide-index="3" style="width: 432.667px; margin-right: 20px;" aria-hidden="true" inert=""><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="BARBARA/3736f156-5b2f-453e-80b0-566671192697.jpg" alt="3736f156-5b2f-453e-80b0-566671192697"></figure></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" role="group" aria-roledescription="slide" aria-label="1 de 6" data-swiper-slide-index="4" style="width: 432.667px; margin-right: 20px;" aria-hidden="true" inert=""><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="BARBARA/5440452c-a4f8-430a-a947-7cb57ed88188.jpg" alt="5440452c-a4f8-430a-a947-7cb57ed88188"></figure></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" role="group" aria-roledescription="slide" aria-label="1 de 6" data-swiper-slide-index="5" style="width: 432.667px; margin-right: 20px;" aria-hidden="true" inert=""><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="BARBARA/26a793ab-b4d9-48d8-8dfb-ae1b1db47224.jpg" alt="26a793ab-b4d9-48d8-8dfb-ae1b1db47224"></figure></div>
+								<div class="swiper-slide swiper-slide-duplicate-next" role="group" aria-roledescription="slide" aria-label="1 de 6" data-swiper-slide-index="0" style="width: 432.667px; margin-right: 20px;" aria-hidden="true" inert=""><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="BARBARA/4c324c90-fae9-40e6-a5a7-e529e67bd27c.jpg" alt="4c324c90-fae9-40e6-a5a7-e529e67bd27c"></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 de 6" data-swiper-slide-index="1" style="width: 432.667px; margin-right: 20px;" aria-hidden="true" inert=""><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="BARBARA/8a3912d5-458a-4679-afeb-8cf6a201360e-1.jpg" alt="8a3912d5-458a-4679-afeb-8cf6a201360e-1"></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 de 6" data-swiper-slide-index="2" style="width: 432.667px; margin-right: 20px;" aria-hidden="true" inert=""><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="BARBARA/37e5c2a5-7e06-4491-96b2-36e3e2ec083f.jpg" alt="37e5c2a5-7e06-4491-96b2-36e3e2ec083f"></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 de 6" data-swiper-slide-index="3" style="width: 432.667px; margin-right: 20px;" aria-hidden="true" inert=""><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="BARBARA/3736f156-5b2f-453e-80b0-566671192697.jpg" alt="3736f156-5b2f-453e-80b0-566671192697"></figure></div><div class="swiper-slide swiper-slide-prev" role="group" aria-roledescription="slide" aria-label="1 de 6" data-swiper-slide-index="4" style="width: 432.667px; margin-right: 20px;" aria-hidden="true" inert=""><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="BARBARA/5440452c-a4f8-430a-a947-7cb57ed88188.jpg" alt="5440452c-a4f8-430a-a947-7cb57ed88188"></figure></div><div class="swiper-slide swiper-slide-active" role="group" aria-roledescription="slide" aria-label="1 de 6" data-swiper-slide-index="5" style="width: 432.667px; margin-right: 20px;"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="BARBARA/26a793ab-b4d9-48d8-8dfb-ae1b1db47224.jpg" alt="26a793ab-b4d9-48d8-8dfb-ae1b1db47224"></figure></div>			<div class="swiper-slide swiper-slide-duplicate swiper-slide-next" role="group" aria-roledescription="slide" aria-label="1 de 6" data-swiper-slide-index="0" style="width: 432.667px; margin-right: 20px;"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="BARBARA/4c324c90-fae9-40e6-a5a7-e529e67bd27c.jpg" alt="4c324c90-fae9-40e6-a5a7-e529e67bd27c"></figure></div><div class="swiper-slide swiper-slide-duplicate" role="group" aria-roledescription="slide" aria-label="1 de 6" data-swiper-slide-index="1" style="width: 432.667px; margin-right: 20px;"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="BARBARA/8a3912d5-458a-4679-afeb-8cf6a201360e-1.jpg" alt="8a3912d5-458a-4679-afeb-8cf6a201360e-1"></figure></div><div class="swiper-slide swiper-slide-duplicate" role="group" aria-roledescription="slide" aria-label="1 de 6" data-swiper-slide-index="2" style="width: 432.667px; margin-right: 20px;" aria-hidden="true" inert=""><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="BARBARA/37e5c2a5-7e06-4491-96b2-36e3e2ec083f.jpg" alt="37e5c2a5-7e06-4491-96b2-36e3e2ec083f"></figure></div></div>
+												<div class="elementor-swiper-button elementor-swiper-button-prev" role="button" tabindex="0" aria-label="Diapositiva anterior">
+						<i aria-hidden="true" class="eicon-chevron-left"></i>					</div>
+					<div class="elementor-swiper-button elementor-swiper-button-next" role="button" tabindex="0" aria-label="Diapositiva siguiente">
+						<i aria-hidden="true" class="eicon-chevron-right"></i>					</div>
+				
+									<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+				</div>
+				</div>
+					</div>
+		</div>
+				<div data-dce-background-color="#0f1e3d" class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-2799cac elementor-hidden-mobile" data-id="2799cac" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+				<section data-dce-background-image-url="" class="elementor-section elementor-top-section elementor-element elementor-element-01d8a9d jedv-enabled--yes elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="01d8a9d" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-17c68c9" data-id="17c68c9" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-67299d3 dce_masking-none elementor-invisible elementor-widget elementor-widget-image" data-id="67299d3" data-element_type="widget" data-settings="{&quot;motion_fx_motion_fx_mouse&quot;:&quot;yes&quot;,&quot;_animation&quot;:&quot;lightSpeedIn&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+													<img width="106" height="106" src="BARBARA/werf.png" class="attachment-large size-large wp-image-3929" alt="">													</div>
+				</div>
+				<div class="elementor-element elementor-element-16f2e32 elementor-widget elementor-widget-heading" data-id="16f2e32" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">¿QUÉ CANCIONES NO PUEDEN FALTAR?</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-b6efc01 elementor-widget elementor-widget-heading" data-id="b6efc01" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">¡Ayudame sugiriendo las canciones que pensás que no pueden faltar en la fiesta!</h2>		</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-a0394c9 elementor-hidden-tablet elementor-hidden-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a0394c9" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-0b19659" data-id="0b19659" data-element_type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-9629af2" data-id="9629af2" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-0fc4a49 elementor-widget elementor-widget-jet-engine-booking-form" data-id="0fc4a49" data-element_type="widget" data-widget_type="jet-engine-booking-form.default">
+				<div class="elementor-widget-container">
+			<form class="jet-form layout-column submit-type-ajax" action="https://eleve11.ar/?jet_engine_action=book" method="POST" data-form-id="4727"><input class="jet-form__field hidden-field" type="hidden" name="_jet_engine_booking_form_id" value="4727" data-field-name="_jet_engine_booking_form_id"><input class="jet-form__field hidden-field" type="hidden" name="_jet_engine_refer" value="https://eleve11.ar/misquince/ambar-8" data-field-name="_jet_engine_refer"><div class="jet-form-row jet-form-row--hidden"><div class="jet-form-col jet-form-col-12  field-type-hidden  jet-form-field-container" data-field="id_invitacion" data-conditional="false"><input class="jet-form__field hidden-field" type="hidden" name="id_invitacion" value="179794" data-field-name="id_invitacion"></div></div><div class="jet-form-row jet-form-row--first-visible"><div class="jet-form-col jet-form-col-4  field-type-text  jet-form-field-container" data-field="nombre" data-conditional="false"><div class="jet-form__label">
+	<span class="jet-form__label-text">Nombre de la canción<span class="jet-form__required">*</span></span>
+	</div><input class="jet-form__field text-field " required="required" name="nombre" id="nombre" type="text" data-field-name="nombre"></div><div class="jet-form-col jet-form-col-4  field-type-text  jet-form-field-container" data-field="Autor" data-conditional="false"><div class="jet-form__label">
+	<span class="jet-form__label-text">Autor<span class="jet-form__required">*</span></span>
+	</div><input class="jet-form__field text-field " required="required" name="Autor" id="Autor" type="text" data-field-name="Autor"></div><div class="jet-form-col jet-form-col-4  field-type-text  jet-form-field-container" data-field="link" data-conditional="false"><div class="jet-form__label">
+	<span class="jet-form__label-text">Link de Spotify, Youtube, etc</span>
+	</div><input class="jet-form__field text-field " name="link" id="link" type="text" data-field-name="link"></div></div><div class="jet-form-row jet-form-row--submit"><div class="jet-form-col jet-form-col-12  field-type-submit  jet-form-field-container" data-field="Submit" data-conditional="false"><div class="jet-form__submit-wrap">
+		<button class="jet-form__submit submit-type-ajax" type="button">Enviar</button>
+</div></div></div><input class="jet-form__field hidden-field" type="hidden" name="_jet_engine_nonce" value="f9dc5509c9" data-field-name="_jet_engine_nonce"></form><div class="jet-form-messages-wrap" data-form-id="4727"></div>		</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-92dba47" data-id="92dba47" data-element_type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+				<div class="elementor-element elementor-element-ffac14e elementor-hidden-desktop elementor-widget elementor-widget-jet-engine-booking-form" data-id="ffac14e" data-element_type="widget" data-widget_type="jet-engine-booking-form.default">
+				<div class="elementor-widget-container">
+			<form class="jet-form layout-column submit-type-ajax" action="https://eleve11.ar/?jet_engine_action=book" method="POST" data-form-id="4727"><input class="jet-form__field hidden-field" type="hidden" name="_jet_engine_booking_form_id" value="4727" data-field-name="_jet_engine_booking_form_id"><input class="jet-form__field hidden-field" type="hidden" name="_jet_engine_refer" value="https://eleve11.ar/misquince/ambar-8" data-field-name="_jet_engine_refer"><div class="jet-form-row jet-form-row--hidden"><div class="jet-form-col jet-form-col-12  field-type-hidden  jet-form-field-container" data-field="id_invitacion" data-conditional="false"><input class="jet-form__field hidden-field" type="hidden" name="id_invitacion" value="179794" data-field-name="id_invitacion"></div></div><div class="jet-form-row jet-form-row--first-visible"><div class="jet-form-col jet-form-col-4  field-type-text  jet-form-field-container" data-field="nombre" data-conditional="false"><div class="jet-form__label">
+	<span class="jet-form__label-text">Nombre de la canción<span class="jet-form__required">*</span></span>
+	</div><input class="jet-form__field text-field " required="required" name="nombre" id="nombre" type="text" data-field-name="nombre"></div><div class="jet-form-col jet-form-col-4  field-type-text  jet-form-field-container" data-field="Autor" data-conditional="false"><div class="jet-form__label">
+	<span class="jet-form__label-text">Autor<span class="jet-form__required">*</span></span>
+	</div><input class="jet-form__field text-field " required="required" name="Autor" id="Autor" type="text" data-field-name="Autor"></div><div class="jet-form-col jet-form-col-4  field-type-text  jet-form-field-container" data-field="link" data-conditional="false"><div class="jet-form__label">
+	<span class="jet-form__label-text">Link de Spotify, Youtube, etc</span>
+	</div><input class="jet-form__field text-field " name="link" id="link" type="text" data-field-name="link"></div></div><div class="jet-form-row jet-form-row--submit"><div class="jet-form-col jet-form-col-12  field-type-submit  jet-form-field-container" data-field="Submit" data-conditional="false"><div class="jet-form__submit-wrap">
+		<button class="jet-form__submit submit-type-ajax" type="button">Enviar</button>
+</div></div></div><input class="jet-form__field hidden-field" type="hidden" name="_jet_engine_nonce" value="f9dc5509c9" data-field-name="_jet_engine_nonce"></form><div class="jet-form-messages-wrap" data-form-id="4727"></div>		</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section data-dce-background-color="#0f1e3d" class="elementor-section elementor-top-section elementor-element elementor-element-c4e03a8 jedv-enabled--yes elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c4e03a8" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4af67dd" data-id="4af67dd" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-95db943 elementor-widget elementor-widget-spacer" data-id="95db943" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="jedv-resize-columns elementor-section elementor-top-section elementor-element elementor-element-c847018 elementor-section-height-min-height jedv-enabled--yes elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="c847018" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-c2193f4 jedv-enabled--yes elementor-invisible" data-id="c2193f4" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;bounceInRight&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-a93ce6d dce_masking-none elementor-invisible elementor-widget elementor-widget-image" data-id="a93ce6d" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;tada&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+													<img width="82" height="82" src="BARBARA/wewef.png" class="attachment-large size-large wp-image-3928" alt="">													</div>
+				</div>
+				<div class="elementor-element elementor-element-bebf5d5 elementor-widget elementor-widget-heading" data-id="bebf5d5" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">instagram wall</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-a8a6c58 elementor-widget elementor-widget-heading" data-id="a8a6c58" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Durante la fiesta utiliza el hashtag.</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-300e3f7 elementor-widget elementor-widget-jet-listing-dynamic-field" data-id="300e3f7" data-element_type="widget" data-widget_type="jet-listing-dynamic-field.default">
+				<div class="elementor-widget-container">
+			<div class="jet-listing jet-listing-dynamic-field display-inline"><div class="jet-listing-dynamic-field__inline-wrap"><div class="jet-listing-dynamic-field__content">#AMBARmisXV</div></div></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-839fb32 elementor-align-center elementor-widget elementor-widget-button" data-id="839fb32" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a class="elementor-button elementor-button-link elementor-size-sm" href="https://www.instagram.com/explore/tags/AMBARmisXV" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">VER MURAL</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section data-dce-background-image-url="/barbara/wferf.png" class="elementor-section elementor-top-section elementor-element elementor-element-31027a9 elementor-section-full_width elementor-section-height-min-height elementor-section-items-stretch jedv-enabled--yes elementor-reverse-mobile elementor-section-height-default" data-id="31027a9" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-99d5ded" data-id="99d5ded" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-8e5a0e0 elementor-absolute e-transform dce_masking-none elementor-invisible elementor-widget elementor-widget-image" data-id="8e5a0e0" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_transform_scale_effect_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.4,&quot;sizes&quot;:[]},&quot;_animation&quot;:&quot;slideInLeft&quot;,&quot;_transform_scale_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+													<img width="444" height="580" src="BARBARA/tu.png" class="attachment-large size-large wp-image-3921" alt="" srcset="BARBARA/tu.png 444w, BARBARA/tu-230x300.png 230w" sizes="(max-width: 444px) 100vw, 444px">													</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-63a8db9" data-id="63a8db9" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-2a2313d dce_masking-none elementor-invisible elementor-widget elementor-widget-image" data-id="2a2313d" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;rubberBand&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+													<img width="113" height="90" src="BARBARA/weffwe.png" class="attachment-large size-large wp-image-3926" alt="">													</div>
+				</div>
+				<div class="elementor-element elementor-element-3667f90 elementor-widget elementor-widget-heading" data-id="3667f90" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">CONFIRMACIÓN DE ASISTENCIA</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-f6e9f42 elementor-widget elementor-widget-heading" data-id="f6e9f42" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Ademas de 
+la asistencia es importante que nos hagas saber si tenemos que 
+contemplar algún tipo de alergia o intolerancia a alimentos.</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-66aa5b4 elementor-widget elementor-widget-jet-engine-booking-form" data-id="66aa5b4" data-element_type="widget" data-widget_type="jet-engine-booking-form.default">
+				<div class="elementor-widget-container">
+			<form class="jet-form layout-column submit-type-ajax" action="https://eleve11.ar/?jet_engine_action=book" method="POST" data-form-id="31761"><input class="jet-form__field hidden-field" type="hidden" name="_jet_engine_booking_form_id" value="31761" data-field-name="_jet_engine_booking_form_id"><input class="jet-form__field hidden-field" type="hidden" name="_jet_engine_refer" value="https://eleve11.ar/misquince/ambar-8" data-field-name="_jet_engine_refer"><div class="jet-form-row jet-form-row--hidden"><div class="jet-form-col jet-form-col-12  field-type-hidden  jet-form-field-container" data-field="id_invitacion" data-conditional="false"><input class="jet-form__field hidden-field" type="hidden" name="id_invitacion" value="179794" data-field-name="id_invitacion"></div></div><div class="jet-form-row jet-form-row--first-visible"><div class="jet-form-col jet-form-col-12  field-type-radio  jet-form-field-container" data-field="asistencia" data-conditional="false"><div class="jet-form__fields-group checkradio-wrap">		<div class="jet-form__field-wrap radio-wrap checkradio-wrap">
+						<label class="jet-form__field-label">
+				<input type="radio" name="asistencia" class="jet-form__field radio-field checkradio-field" value="Asistire" data-field-name="asistencia" required="required">
+				Sí! Confirmo			</label>
+		</div>
+				<div class="jet-form__field-wrap radio-wrap checkradio-wrap">
+						<label class="jet-form__field-label">
+				<input type="radio" name="asistencia" class="jet-form__field radio-field checkradio-field" value="No-Asistire" data-field-name="asistencia" required="required">
+				No puedo :(			</label>
+		</div>
+		</div></div><div class="jet-form-col jet-form-col-12  field-type-textarea  jet-form-field-container" data-field="mensaje" data-conditional="false"><textarea class="jet-form__field textarea-field" placeholder="Ingrese algún dato importante..." name="mensaje" data-field-name="mensaje" id="mensaje"></textarea></div></div><div class="jet-form-row"><div class="jet-form-col jet-form-col-12  field-type-text  jet-form-field-container" data-field="nombre" data-conditional="false"><input class="jet-form__field text-field " placeholder="Nombre completo" required="required" name="nombre" id="nombre" type="text" data-field-name="nombre"></div></div><div class="jet-form-row jet-form-row--submit"><div class="jet-form-col jet-form-col-12  field-type-submit  jet-form-field-container" data-field="Submit" data-conditional="false"><div class="jet-form__submit-wrap">
+		<button class="jet-form__submit submit-type-ajax" type="button">Confirmar</button>
+</div></div></div><input class="jet-form__field hidden-field" type="hidden" name="_jet_engine_nonce" value="f9dc5509c9" data-field-name="_jet_engine_nonce"></form><div class="jet-form-messages-wrap" data-form-id="31761"></div>		</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-f697653 elementor-hidden-mobile" data-id="f697653" data-element_type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-f54b9d9 elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f54b9d9" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d8a6624" data-id="d8a6624" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-9387f7c elementor-widget__width-auto elementor-widget elementor-widget-heading" data-id="9387f7c" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Crea tu invitación digital gratis, cómprala solo si te gusta</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-5b3f6ee elementor-widget__width-auto elementor-view-default elementor-widget elementor-widget-icon" data-id="5b3f6ee" data-element_type="widget" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-wrapper">
+			<a class="elementor-icon" href="https://eleve11.ar/">
+			<svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" id="Capa_1" data-name="Capa 1" viewBox="0 0 283.1 54.74"><defs><style>.cls-1{fill:#212121;}.cls-2{fill:url(#Degradado_sin_nombre_1147);}.cls-3{fill:#fff;}</style><linearGradient id="Degradado_sin_nombre_1147" x1="8.02" y1="46.72" x2="46.72" y2="8.02" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff6660"></stop><stop offset="1" stop-color="#2d2ce5"></stop></linearGradient></defs><path class="cls-1" d="M266.74,8.8c-.34,0-.67,0-1,0l-.67.05.79,5.58h.39c5.13.06,7.27,3.47,7.27,9.34V45.11H280V23.82C280,14.7,274.79,8.8,266.74,8.8Z"></path><path class="cls-1" d="M266.74,8.8c-.34,0-.67,0-1,0l-.67.05.79,5.58h.39c5.13.06,7.27,3.47,7.27,9.34V45.11H280V23.82C280,14.7,274.79,8.8,266.74,8.8Z"></path><path class="cls-1" d="M246.24,8.8c-.34,0-.67,0-1,0l-.67.05.79,5.58h.39c5.13.06,7.27,3.47,7.27,9.34V45.11h6.48V23.82C259.5,14.7,254.29,8.8,246.24,8.8Z"></path><path class="cls-1" d="M246.24,8.8c-.34,0-.67,0-1,0l-.67.05.79,5.58h.39c5.13.06,7.27,3.47,7.27,9.34V45.11h6.48V23.82C259.5,14.7,254.29,8.8,246.24,8.8Z"></path><path class="cls-1" d="M88.79,9.41c-10.32,0-17.13,7.26-17.13,18.09s7,17.83,17.4,17.83a17.92,17.92,0,0,0,15.21-7.59L99.11,35a12.59,12.59,0,0,1-10.12,5c-6.15,0-9.53-4-10.19-10.3h26.93a20.55,20.55,0,0,0,.13-2.86C105.86,16.41,99.05,9.41,88.79,9.41Zm-10,15.82c.6-6.55,4.17-10.57,10-10.57s9.53,4,10.12,10.57Z"></path><path class="cls-1" d="M88.79,9.41c-10.32,0-17.13,7.26-17.13,18.09s7,17.83,17.4,17.83a17.92,17.92,0,0,0,15.21-7.59L99.11,35a12.59,12.59,0,0,1-10.12,5c-6.15,0-9.53-4-10.19-10.3h26.93a20.55,20.55,0,0,0,.13-2.86C105.86,16.41,99.05,9.41,88.79,9.41Zm-10,15.82c.6-6.55,4.17-10.57,10-10.57s9.53,4,10.12,10.57Z"></path><path class="cls-1" d="M146.87,9.41c-10.32,0-17.14,7.26-17.14,18.09s7,17.82,17.4,17.82c6.49,0,11.91-2.78,15.22-7.58L157.19,35a12.59,12.59,0,0,1-10.12,5c-6.15,0-9.53-4-10.19-10.3h26.93a20.55,20.55,0,0,0,.13-2.86C163.94,16.41,157.12,9.41,146.87,9.41Zm-10,15.82c.6-6.55,4.17-10.57,10-10.57s9.53,4,10.12,10.57Z"></path><path class="cls-1" d="M146.87,9.41c-10.32,0-17.14,7.26-17.14,18.09s7,17.82,17.4,17.82c6.49,0,11.91-2.78,15.22-7.58L157.19,35a12.59,12.59,0,0,1-10.12,5c-6.15,0-9.53-4-10.19-10.3h26.93a20.55,20.55,0,0,0,.13-2.86C163.94,16.41,157.12,9.41,146.87,9.41Zm-10,15.82c.6-6.55,4.17-10.57,10-10.57s9.53,4,10.12,10.57Z"></path><polygon class="cls-1" points="184.95 37.31 173.39 9.68 165.82 9.68 181.5 45.06 188.47 45.06 204.09 9.68 196.58 9.68 184.95 37.31"></polygon><polygon class="cls-1" points="184.95 37.31 173.39 9.68 165.82 9.68 181.5 45.06 188.47 45.06 204.09 9.68 196.58 9.68 184.95 37.31"></polygon><path class="cls-1" d="M223.44,9.41c-10.32,0-17.14,7.26-17.14,18.09s7,17.82,17.4,17.82c6.49,0,11.91-2.78,15.22-7.58L233.76,35a12.59,12.59,0,0,1-10.12,5c-6.16,0-9.53-4-10.19-10.3h26.92a19.1,19.1,0,0,0,.14-2.86C240.51,16.41,233.69,9.41,223.44,9.41Zm-10,15.82c.59-6.55,4.17-10.57,10-10.57s9.52,4,10.12,10.57Z"></path><path class="cls-1" d="M223.44,9.41c-10.32,0-17.14,7.26-17.14,18.09s7,17.82,17.4,17.82c6.49,0,11.91-2.78,15.22-7.58L233.76,35a12.59,12.59,0,0,1-10.12,5c-6.16,0-9.53-4-10.19-10.3h26.92a19.1,19.1,0,0,0,.14-2.86C240.51,16.41,233.69,9.41,223.44,9.41Zm-10,15.82c.59-6.55,4.17-10.57,10-10.57s9.52,4,10.12,10.57Z"></path><path class="cls-1" d="M125.62,39.85c-5.12-.07-7.26-3.47-7.26-9.35V9.21h-6.49V30.5c0,9.13,5.21,15,13.27,15,.33,0,.65,0,1,0l.69,0-.8-5.59Z"></path><path class="cls-1" d="M125.62,39.85c-5.12-.07-7.26-3.47-7.26-9.35V9.21h-6.49V30.5c0,9.13,5.21,15,13.27,15,.33,0,.65,0,1,0l.69,0-.8-5.59Z"></path><circle class="cls-2" cx="27.37" cy="27.37" r="27.37"></circle><path class="cls-3" d="M30.67,13.63c-.26,0-.51,0-.76,0l-.81.05.66,4.69h.54c3.43,0,5.1,2.21,5.1,6.63V41.1h5.38v-16C40.78,18.11,36.81,13.63,30.67,13.63Z"></path><path class="cls-3" d="M15.49,13.63c-.26,0-.51,0-.76,0l-.81.05.66,4.69h.54c3.43,0,5.1,2.21,5.1,6.63V41.1H25.6v-16C25.6,18.11,21.63,13.63,15.49,13.63Z"></path></svg>			</a>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section data-dce-background-color="#8DCCC5" class="elementor-section elementor-top-section elementor-element elementor-element-e81ad31 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="e81ad31" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-f8a7c5f" data-id="f8a7c5f" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-2885247 elementor-fixed bdt-backdrop-filter-yes jedv-enabled--yes elementor-widget elementor-widget-dce-rawphp" data-id="2885247" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;fixed&quot;}" data-widget_type="dce-rawphp.default">
+				<div class="elementor-widget-container">
+			<!-- Dynamic PHP Raw --><audio id="track">
+  <source src="BARBARA/X2Download.app-Emilia-cielo-en-la-mente-Official-Lyric-Video.mp3">
+</audio>
+<div id="contenedor-play">
+<div id="player-container">
+  <div id="play-pause" class="play">Play</div>
+</div>
+</div>
+<script>var track = document.getElementById("track");
+
+var controlBtn = document.getElementById("play-pause");
+
+
+
+
+function playPause() {
+    if (track.paused) {
+        track.play();
+        //controlBtn.textContent = "Pause";
+        controlBtn.className = "pause";
+    } else { 
+        track.pause();
+         //controlBtn.textContent = "Play";
+        controlBtn.className = "play";
+    }
+}
+
+controlBtn.addEventListener("click", playPause);
+track.addEventListener("ended", function() {
+  controlBtn.className = "play";
+});
+
+</script>
+		</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-7171ab4" data-id="7171ab4" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-8b847ba elementor-widget__width-auto elementor-widget elementor-widget-heading" data-id="8b847ba" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Invitación creada con</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-01c777f elementor-widget__width-auto dce_masking-none elementor-widget elementor-widget-image" data-id="01c777f" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+														<a href="https://eleve11.ar/">
+							<img width="700" height="143" src="BARBARA/LOGO-EVENTDATE-03-2.png" class="attachment-large size-large wp-image-40628" alt="" srcset="BARBARA/LOGO-EVENTDATE-03-2.png 700w, BARBARA/LOGO-EVENTDATE-03-2-300x61.png 300w" sizes="(max-width: 700px) 100vw, 700px">								</a>
+													</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-3ab6796" data-id="3ab6796" data-element_type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		</div>
+				
+				
+				
+				
+				
+				
+				
+		<link rel="stylesheet" id="dce-dynamic-visibility-css" href="BARBARA/dynamic-visibility.min.css" media="all">
+<link rel="stylesheet" id="ep-accordion-css" href="BARBARA/ep-accordion.css" media="all">
+<link rel="stylesheet" id="elementor-post-3893-css" href="BARBARA/post-3893.css" media="all">
+<link rel="stylesheet" id="elementor-post-4102-css" href="BARBARA/post-4102.css" media="all">
+<link rel="stylesheet" id="elementor-post-4107-css" href="BARBARA/post-4107.css" media="all">
+<link rel="stylesheet" id="elementor-post-4110-css" href="BARBARA/post-4110.css" media="all">
+<link rel="stylesheet" id="elementor-post-4114-css" href="BARBARA/post-4114.css" media="all">
+<link rel="stylesheet" id="e-animations-css" href="BARBARA/animations.min.css" media="all">
+<script id="wp-block-template-skip-link-js-after">
+	( function() {
+		var skipLinkTarget = document.querySelector( 'main' ),
+			sibling,
+			skipLinkTargetID,
+			skipLink;
+
+		// Early exit if a skip-link target can't be located.
+		if ( ! skipLinkTarget ) {
+			return;
+		}
+
+		/*
+		 * Get the site wrapper.
+		 * The skip-link will be injected in the beginning of it.
+		 */
+		sibling = document.querySelector( '.wp-site-blocks' );
+
+		// Early exit if the root element was not found.
+		if ( ! sibling ) {
+			return;
+		}
+
+		// Get the skip-link target's ID, and generate one if it doesn't exist.
+		skipLinkTargetID = skipLinkTarget.id;
+		if ( ! skipLinkTargetID ) {
+			skipLinkTargetID = 'wp--skip-link--target';
+			skipLinkTarget.id = skipLinkTargetID;
+		}
+
+		// Create the skip link.
+		skipLink = document.createElement( 'a' );
+		skipLink.classList.add( 'skip-link', 'screen-reader-text' );
+		skipLink.href = '#' + skipLinkTargetID;
+		skipLink.innerHTML = 'Saltar al contenido';
+
+		// Inject the skip link.
+		sibling.parentElement.insertBefore( skipLink, sibling );
+	}() );
+	
+</script>
+<script id="jet-engine-frontend-js-extra">
+var JetEngineSettings = {"ajaxurl":"https:\/\/eleve11.ar\/wp-admin\/admin-ajax.php","ajaxlisting":"https:\/\/eleve11.ar\/misquince\/ambar-8\/?nocache=1751158194","mapPopupTimeout":"400"};
+</script>
+<script src="BARBARA/frontend.js" id="jet-engine-frontend-js"></script>
+<script src="BARBARA/frontend-forms.js" id="jet-engine-frontend-forms-js"></script>
+<script id="bdt-uikit-js-extra">
+var element_pack_ajax_login_config = {"ajaxurl":"https:\/\/eleve11.ar\/wp-admin\/admin-ajax.php","language":"es","loadingmessage":"Sending user info, please wait...","unknownerror":"Unknown error, make sure access is correct!"};
+var ElementPackConfig = {"ajaxurl":"https:\/\/eleve11.ar\/wp-admin\/admin-ajax.php","nonce":"0db6287f8f","data_table":{"language":{"sLengthMenu":"Show _MENU_ Entries","sInfo":"Showing _START_ to _END_ of _TOTAL_ entries","sSearch":"Search :","sZeroRecords":"No matching records found","oPaginate":{"sPrevious":"Previous","sNext":"Next"}}},"contact_form":{"sending_msg":"Sending message please wait...","captcha_nd":"Invisible captcha not defined!","captcha_nr":"Could not get invisible captcha response!"},"mailchimp":{"subscribing":"Subscribing you please wait..."},"search":{"more_result":"More Results","search_result":"SEARCH RESULT","not_found":"not found"},"elements_data":{"sections":[],"columns":[],"widgets":[]}};
+</script>
+<script src="BARBARA/bdt-uikit.min.js" id="bdt-uikit-js"></script>
+<script src="BARBARA/webpack.runtime.min.js" id="elementor-webpack-runtime-js"></script>
+<script src="BARBARA/frontend-modules.min.js" id="elementor-frontend-modules-js"></script>
+<script src="BARBARA/waypoints.min.js" id="elementor-waypoints-js"></script>
+<script src="BARBARA/core.min.js" id="jquery-ui-core-js"></script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartir en Facebook","shareOnTwitter":"Compartir en Twitter","pinIt":"Pinear","download":"Descargar","downloadImage":"Descargar imagen","fullscreen":"Pantalla completa","zoom":"Zoom","share":"Compartir","playVideo":"Reproducir v\u00eddeo","previous":"Anterior","next":"Siguiente","close":"Cerrar","a11yCarouselWrapperAriaLabel":"Carrusel | Scroll horizontal: Flecha izquierda y derecha","a11yCarouselPrevSlideMessage":"Diapositiva anterior","a11yCarouselNextSlideMessage":"Diapositiva siguiente","a11yCarouselFirstSlideMessage":"Esta es la primera diapositiva","a11yCarouselLastSlideMessage":"Esta es la \u00faltima diapositiva","a11yCarouselPaginationBulletMessage":"Ir a la diapositiva"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"M\u00f3vil vertical","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"M\u00f3vil horizontal","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tableta vertical","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tableta horizontal","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Port\u00e1til","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Pantalla grande","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.19.1","is_static":false,"experimentalFeatures":{"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"additional_custom_breakpoints":true,"theme_builder_v2":true,"block_editor_assets_optimize":true,"landing-pages":true,"e_image_loading_optimization":true,"e_global_styleguide":true,"form-submissions":true,"e_scroll_snap":true},"urls":{"assets":"https:\/\/eleve11.ar\/wp-content\/plugins\/elementor\/assets\/"},"swiperClass":"swiper-container","settings":{"page":[],"editorPreferences":[],"dynamicooo":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":179794,"title":"AMBAR%20%E2%80%93%20Eventdate","excerpt":"","featuredImage":false}};
+</script>
+<script src="BARBARA/frontend.min_002.js" id="elementor-frontend-js"></script><span id="elementor-device-mode" class="elementor-screen-only"></span>
+<script src="BARBARA/ep-accordion.min.js" id="ep-accordion-js"></script>
+<script src="BARBARA/helper.min.js" id="element-pack-helper-js"></script>
+<script src="BARBARA/webpack-pro.runtime.min.js" id="elementor-pro-webpack-runtime-js"></script>
+<script id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/eleve11.ar\/wp-admin\/admin-ajax.php","nonce":"f7bb398294","urls":{"assets":"https:\/\/eleve11.ar\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/eleve11.ar\/wp-json\/"},"i18n":{"toc_no_headings_found":"No headings were found on this page."},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"es_ES","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/eleve11.ar\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script src="BARBARA/frontend.min.js" id="elementor-pro-frontend-js"></script>
+<script src="BARBARA/elements-handlers.min.js" id="pro-elements-handlers-js"></script><svg style="display: none;" class="e-font-icon-svg-symbols"></svg>
+<script id="jet-elements-js-extra">
+var jetElements = {"ajaxUrl":"https:\/\/eleve11.ar\/wp-admin\/admin-ajax.php","isMobile":"false","templateApiUrl":"https:\/\/eleve11.ar\/wp-json\/jet-elements-api\/v1\/elementor-template","devMode":"false","messages":{"invalidMail":"Please specify a valid e-mail"}};
+</script>
+<script src="BARBARA/jet-elements.min.js" id="jet-elements-js"></script>
+<script id="jet-tabs-frontend-js-extra">
+var JetTabsSettings = {"ajaxurl":"https:\/\/eleve11.ar\/wp-admin\/admin-ajax.php","isMobile":"false","templateApiUrl":"https:\/\/eleve11.ar\/wp-json\/jet-tabs-api\/v1\/elementor-template","devMode":"false"};
+</script>
+<script src="BARBARA/jet-tabs-frontend.min.js" id="jet-tabs-frontend-js"></script>
+<script src="BARBARA/settings.min.js" id="dce-settings-js"></script>
+<script src="BARBARA/fix-background-loop.min.js" id="dce-fix-background-loop-js"></script>
+<style id="dce-template-fix-21fd83a-inline">.elementor .dce-elementor-post-179794 .elementor-element.elementor-element-21fd83a:not(.elementor-motion-effects-element-type-background), .elementor .dce-elementor-post-179794 .elementor-element.elementor-element-21fd83a > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: url("/BARBI/banners/barbara.jpeg");}[data-elementor-device-mode="mobile"] .elementor .dce-elementor-post-179794 .elementor-element.elementor-element-21fd83a:not(.elementor-motion-effects-element-type-background), [data-elementor-device-mode="mobile"] .elementor .dce-elementor-post-179794 .elementor-element.elementor-element-21fd83a > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: url("https://eleve11.ar/wp-content/uploads/jet-engine-forms/2108/2024/05/IMG-20240523-WA0132-1.jpg");}</style><style id="dce-template-fix-2bf9906-inline">.elementor .dce-elementor-post-179794 .elementor-element.elementor-element-2bf9906:not(.elementor-motion-effects-element-type-background), .elementor .dce-elementor-post-179794 .elementor-element.elementor-element-2bf9906 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: url("/BARBI/banners/barbara.jpeg");}</style>	
+
+<script src="BARBARA/dialog.min.js"></script><script src="BARBARA/swiper.min.js"></script></body></html>
