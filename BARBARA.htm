@@ -389,7 +389,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 						<div class="elementor-element elementor-element-5e9a1fc elementor-widget elementor-widget-jet-countdown-timer" data-id="5e9a1fc" data-element_type="widget" data-widget_type="jet-countdown-timer.default">
 				<div class="elementor-widget-container">
 			<div class="elementor-jet-countdown-timer jet-elements">
-<div class="jet-countdown-timer" data-type="due_date" data-due-date="1724544000">
+<div class="jet-countdown-timer" data-type="due_date" data-due-date="1763760000">
 	<div class="jet-countdown-timer__item item-days">
 	<div class="jet-countdown-timer__item-value" data-value="days"><span class="jet-countdown-timer__digit">0</span><span class="jet-countdown-timer__digit">0</span></div>
 	<div class="jet-countdown-timer__item-label">DÍAS</div></div>
@@ -691,19 +691,68 @@ contemplar algún tipo de alergia o intolerancia a alimentos.</h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-66aa5b4 elementor-widget elementor-widget-jet-engine-booking-form" data-id="66aa5b4" data-element_type="widget" data-widget_type="jet-engine-booking-form.default">
 				<div class="elementor-widget-container">
-			<form class="jet-form layout-column submit-type-ajax" action="https://eleve11.ar/?jet_engine_action=book" method="POST" data-form-id="31761"><input class="jet-form__field hidden-field" type="hidden" name="_jet_engine_booking_form_id" value="31761" data-field-name="_jet_engine_booking_form_id"><input class="jet-form__field hidden-field" type="hidden" name="_jet_engine_refer" value="https://eleve11.ar/misquince/ambar-8" data-field-name="_jet_engine_refer"><div class="jet-form-row jet-form-row--hidden"><div class="jet-form-col jet-form-col-12  field-type-hidden  jet-form-field-container" data-field="id_invitacion" data-conditional="false"><input class="jet-form__field hidden-field" type="hidden" name="id_invitacion" value="179794" data-field-name="id_invitacion"></div></div><div class="jet-form-row jet-form-row--first-visible"><div class="jet-form-col jet-form-col-12  field-type-radio  jet-form-field-container" data-field="asistencia" data-conditional="false"><div class="jet-form__fields-group checkradio-wrap">		<div class="jet-form__field-wrap radio-wrap checkradio-wrap">
-						<label class="jet-form__field-label">
-				<input type="radio" name="asistencia" class="jet-form__field radio-field checkradio-field" value="Asistire" data-field-name="asistencia" required="required">
-				Sí! Confirmo			</label>
+			
+					<form id="formularioInvitados">
+  <div class="mb-3">
+    <label class="form-label">¿Vas a asistir?</label><br>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="asistencia" id="asistire" value="Asistiré" required>
+      <label class="form-check-label" for="asistire">Sí! Confirmo</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="asistencia" id="noAsistire" value="No podré asistir" required>
+      <label class="form-check-label" for="noAsistire">No puedo :(</label>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="mensaje" class="form-label">Mensaje opcional</label>
+    <textarea class="form-control" name="mensaje" id="mensaje" placeholder="Ingrese algún dato importante..."></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="nombre" class="form-label">Nombre completo</label>
+    <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Tu nombre" required>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Confirmar</button>
+</form>
+<script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycby7UM2nZemkJiwoATfnyYHzpUOPvMO4F9H4YhZlRednVYSxKn3mxo7GKvSWV72J4Vos/exec"; // ← tu URL de Apps Script
+
+  document.getElementById("formularioInvitados").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const asistenciaChecked = document.querySelector('input[name="asistencia"]:checked');
+    const nombreInput = document.getElementById("nombre");
+
+    const asistencia = asistenciaChecked ? asistenciaChecked.value : "";
+    const mensaje = document.getElementById("mensaje").value.trim();
+    const nombre = nombreInput.value.trim();
+
+   
+
+    const datos = { asistencia, mensaje, nombre };
+
+    try {
+      await fetch(scriptURL, {
+        method: "POST",
+        body: JSON.stringify(datos),
+        headers: { "Content-Type": "application/json" },
+      });
+
+      alert("✅ Confirmación enviada con éxito.");
+      document.getElementById("formularioInvitados").reset();
+    } catch (error) {
+      console.error("Error al enviar:", error);
+      alert("❌ Ocurrió un error. Intentá de nuevo.");
+    }
+  });
+</script>
+
+
+
 		</div>
-				<div class="jet-form__field-wrap radio-wrap checkradio-wrap">
-						<label class="jet-form__field-label">
-				<input type="radio" name="asistencia" class="jet-form__field radio-field checkradio-field" value="No-Asistire" data-field-name="asistencia" required="required">
-				No puedo :(			</label>
-		</div>
-		</div></div><div class="jet-form-col jet-form-col-12  field-type-textarea  jet-form-field-container" data-field="mensaje" data-conditional="false"><textarea class="jet-form__field textarea-field" placeholder="Ingrese algún dato importante..." name="mensaje" data-field-name="mensaje" id="mensaje"></textarea></div></div><div class="jet-form-row"><div class="jet-form-col jet-form-col-12  field-type-text  jet-form-field-container" data-field="nombre" data-conditional="false"><input class="jet-form__field text-field " placeholder="Nombre completo" required="required" name="nombre" id="nombre" type="text" data-field-name="nombre"></div></div><div class="jet-form-row jet-form-row--submit"><div class="jet-form-col jet-form-col-12  field-type-submit  jet-form-field-container" data-field="Submit" data-conditional="false"><div class="jet-form__submit-wrap">
-		<button class="jet-form__submit submit-type-ajax" type="button">Confirmar</button>
-</div></div></div><input class="jet-form__field hidden-field" type="hidden" name="_jet_engine_nonce" value="f9dc5509c9" data-field-name="_jet_engine_nonce"></form><div class="jet-form-messages-wrap" data-form-id="31761"></div>		</div>
 				</div>
 					</div>
 		
