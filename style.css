@@ -5,7 +5,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #fff;
+  background-color: #b82222;
   color: var(--color-texto);
   margin: 0;
   padding: 0;
@@ -15,6 +15,11 @@ body {
 header {
   background-color: var(--color-principal);
   padding: 1rem 0;
+}
+
+.color_label
+{
+  color: black!important;
 }
 
 .logo-container img {
