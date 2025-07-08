@@ -11,6 +11,8 @@ body {
   padding: 0;
 }
 
+
+
 /* Encabezado */
 header {
   background-color: var(--color-principal);
@@ -77,4 +79,16 @@ footer {
   .logo-container img {
     margin-bottom: 10px;
   }
+}
+
+.nombre_barbie
+{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  font-size: clamp(16px, 2.5vw, 32px) !important;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  font-weight: bold
 }
