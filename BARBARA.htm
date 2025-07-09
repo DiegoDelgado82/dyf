@@ -176,45 +176,50 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 		</div>
 	</section>
 	<!-- Sección Contador -->			
-	<section data-dce-background-image-url="/barbara/asdqw.png" class="elementor-section elementor-top-section elementor-element elementor-element-41334ac elementor-section-height-min-height jedv-enabled--yes elementor-section-items-stretch elementor-section-boxed elementor-section-height-default" data-id="41334ac" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;none&quot;}">
-		<div class="elementor-container elementor-column-gap-default">
-			<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6b74485" data-id="6b74485" data-element_type="column">
-				<div class="elementor-widget-wrap elementor-element-populated">
-					<div class="elementor-element elementor-element-5e9a1fc elementor-widget elementor-widget-jet-countdown-timer" data-id="5e9a1fc" data-element_type="widget" data-widget_type="jet-countdown-timer.default">
-						<div class="elementor-widget-container">
-							<div class="elementor-jet-countdown-timer jet-elements">
-								<div class="jet-countdown-timer" data-type="due_date" data-due-date="1763760000">
-									<div class="jet-countdown-timer__item item-days">
-									<div class="jet-countdown-timer__item-value" data-value="days"><span class="jet-countdown-timer__digit">0</span><span class="jet-countdown-timer__digit">0</span></div>
-									<div class="jet-countdown-timer__item-label">DÍAS</div></div>
-									<div class="jet-countdown-timer__item item-hours">
-									<div class="jet-countdown-timer__item-value" data-value="hours"><span class="jet-countdown-timer__digit">0</span><span class="jet-countdown-timer__digit">0</span></div>
-									<div class="jet-countdown-timer__item-label">HRS</div></div>
-									<div class="jet-countdown-timer__item item-minutes">
-									<div class="jet-countdown-timer__item-value" data-value="minutes"><span class="jet-countdown-timer__digit">0</span><span class="jet-countdown-timer__digit">0</span></div>
-									<div class="jet-countdown-timer__item-label">MIN</div></div>
-									<div class="jet-countdown-timer__item item-seconds">
-									<div class="jet-countdown-timer__item-value" data-value="seconds"><span class="jet-countdown-timer__digit">0</span><span class="jet-countdown-timer__digit">0</span></div>
-									<div class="jet-countdown-timer__item-label">SEG</div></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="elementor-element elementor-element-aedc1c4 elementor-align-center elementor-mobile-align-center elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-id="aedc1c4" data-element_type="widget" data-widget_type="button.default">
-						<div class="elementor-widget-container">
-							<div class="elementor-button-wrapper">
-								<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-									<span class="elementor-button-content-wrapper">
-										<span class="elementor-button-text">AGENDAR LA FECHA</span>
-									</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+	
+
+
+	<section style="background-image: url('/barbara/asdqw.png'); padding: 2rem 1rem; text-align: center;">
+  <div style="font-family: 'Poppins', sans-serif; font-weight: bold; font-size: 3.5rem; color: #0d1b3d;" id="compactCountdown">
+    Cargando...
+  </div>
+</section>
+
+<script>
+  const endDate = new Date("2025-11-23T21:30:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const diff = endDate - now;
+
+    if (diff <= 0) {
+      document.getElementById("compactCountdown").textContent = "¡Es hoy!";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    const html = `
+      ${days}<span style="font-size:0.3em;">DÍAS</span> 
+      ${hours.toString().padStart(2, '0')}<span style="font-size:0.3em;">HS</span> 
+      ${minutes.toString().padStart(2, '0')}<span style="font-size:0.3em;">MIN</span> 
+      ${seconds.toString().padStart(2, '0')}<span style="font-size:0.3em;">SEG</span>
+    `;
+
+    document.getElementById("compactCountdown").innerHTML = html;
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+
+
+
+
+
 
 	<!-- Sección Antes Frase -->			
 	<section data-dce-background-color="#0f1e3d" class="elementor-section elementor-top-section elementor-element elementor-element-5d44c5a jedv-enabled--yes elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5d44c5a" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
