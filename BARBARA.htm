@@ -318,7 +318,7 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 		<h6 class="text-dark fw-bold font_title">RÍO NEGRO 4000. CÓRDOBA CAPITAL</h6>
 
 		<!-- Hora -->
-		<h4 class="text-dark fw-bold mt-3">21:30 HS</h4>
+		<h4 class="text-dark fw-bold mt-3 font_title">21:30 HS</h4>
 
 		<!-- Imagen del salón -->
 		<div class="my-3">
@@ -400,8 +400,9 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 				<img width="80" height="90" src="BARBARA/weffwe.png" class="attachment-large size-large wp-image-3926" alt="">
 			</div>
 			<h4 class="elementor-heading-title elementor-size-default text-dark font_title fw-bold">CONFIRMACIÓN DE ASISTENCIA</h4>
-			<p class="text-dark font_p">Ademas de la asistencia es importante que nos hagas saber si tenemos que contemplar algún tipo de alergia o intolerancia a alimentos.</p>
-			<p class="text-dark font_p">¡Contanos si podés asistir y con cuántos acompañantes!</p>
+			<p class="text-dark" style="font-size: 0.95rem;">Ademas de la asistencia es importante que nos hagas saber si tenemos que contemplar algún tipo de alergia o intolerancia a alimentos.</p>
+			<p class="text-dark fw-bold" style="font-size: 1.1rem;">¡Contanos si podés asistir y con cuántos acompañantes!</p>
+				
 		</div>
 
 		<form id="formAsistencia" class="mx-auto text-dark " style="max-width: 600px;">
@@ -466,7 +467,7 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 			</div>
 
 			<h4 class="text-dark fw-bold font_title">REGALOS</h4>
-			<p class="text-dark font_p">Tu presencia es lo más importante, pero si querés hacernos un regalo podés usar los datos que se mostrarán a continuación.</p>
+			<p class="text-dark" style="font-size: 0.95rem;">Tu presencia es lo más importante, pero si querés hacernos un regalo podés usar los datos que se mostrarán a continuación.</p>
 			
 			<button class="btn btn-custom-outline rounded-pill px-4 my-3" onclick="mostrarDatosRegalo()">VER DATOS</button>
 		</div>
@@ -529,7 +530,7 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 			</div>
 
 			<h4 class="text-dark fw-bold font_title">¿QUÉ CANCIONES NO PUEDEN FALTAR?</h4>
-			<p class="text-dark font_p">¡Ayudame sugiriendo las canciones que pensás que no pueden faltar en la fiesta!</p>
+			<p class="text-dark" style="font-size: 0.95rem;">¡Ayudame sugiriendo las canciones que pensás que no pueden faltar en la fiesta!</p>
 		</div>
 
 		<form id="formCanciones" class="mx-auto text-dark" style="max-width: 600px;">
@@ -565,65 +566,46 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 					
 			
 	<!-- Sección Pie de página -->				
-	<section data-dce-background-color="#8DCCC5" class="elementor-section elementor-top-section elementor-element elementor-element-e81ad31 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="e81ad31" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-		<div class="elementor-container elementor-column-gap-default">
-			<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-f8a7c5f" data-id="f8a7c5f" data-element_type="column">
-				<div class="elementor-widget-wrap elementor-element-populated">
-					<div class="elementor-element elementor-element-2885247 elementor-fixed bdt-backdrop-filter-yes jedv-enabled--yes elementor-widget elementor-widget-dce-rawphp" data-id="2885247" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;fixed&quot;}" data-widget_type="dce-rawphp.default">
-						<div class="elementor-widget-container">
-							<!-- Dynamic PHP Raw --><audio id="track">
-							<source src="BARBARA/Blank Space.mp3">
-							</audio>
-							<div id="contenedor-play">
-								<div id="player-container">
-									<div id="play-pause" class="play play_blue">Play
-									</div>
-								</div>
-							</div>
-							<script>var track = document.getElementById("track");
-								var controlBtn = document.getElementById("play-pause");
-								function playPause() {
-									if (track.paused) {
-										track.play();
-										//controlBtn.textContent = "Pause";
-										controlBtn.className = "pause";
-									} else { 
-										track.pause();
-										//controlBtn.textContent = "Play";
-										controlBtn.className = "play";
-									}
-								}
+	<footer style="background-color: #0d1b3d; padding: 2rem 1rem; text-align: center; color: white;">
+  <!-- Audio -->
+  <audio id="track">
+    <source src="BARBARA/Blank Space.mp3" type="audio/mpeg">
+  </audio>
 
-								controlBtn.addEventListener("click", playPause);
-								track.addEventListener("ended", function() {
-								controlBtn.className = "play";
-								});
-							</script>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-7171ab4" data-id="7171ab4" data-element_type="column">
-				<div class="elementor-widget-wrap elementor-element-populated">
-					<div class="elementor-element elementor-element-8b847ba elementor-widget__width-auto elementor-widget elementor-widget-heading" data-id="8b847ba" data-element_type="widget" data-widget_type="heading.default">
-						<div class="elementor-widget-container">
-							<a href="https://grupodyf.com/"></a>
-							<h2 class="elementor-heading-title elementor-size-default">Diseñada por Grupo DyF</h2>
-						</div>
-					</div>
-					<div class="elementor-element elementor-element-01c777f elementor-widget__width-auto dce_masking-none elementor-widget elementor-widget-image" data-id="01c777f" data-element_type="widget" data-widget_type="image.default">
-						<div class="elementor-widget-container">
-							<a href="https://grupodyf.com/"></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-3ab6796" data-id="3ab6796" data-element_type="column">
-				<div class="elementor-widget-wrap">
-				</div>
-			</div>
-		</div>
-	</section>
+  <!-- Texto con enlace -->
+  <a href="https://grupodyf.com/" style="color: white; font-weight: bold; text-decoration: none;">
+    Diseñada por Grupo DyF
+  </a>
+
+  <!-- Botón flotante -->
+  <button id="play-pause" class="play"
+    style="position: fixed; bottom: 20px; right: 20px; background-color: #0d1b3d; color: white; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 18px; z-index: 9999;">
+    ▶️
+  </button>
+
+  <!-- Script -->
+  <script>
+    const track = document.getElementById("track");
+    const controlBtn = document.getElementById("play-pause");
+
+    function playPause() {
+      if (track.paused) {
+        track.play();
+        controlBtn.textContent = "⏸️";
+      } else {
+        track.pause();
+        controlBtn.textContent = "▶️";
+      }
+    }
+
+    controlBtn.addEventListener("click", playPause);
+    track.addEventListener("ended", function () {
+      controlBtn.textContent = "▶️";
+    });
+  </script>
+</footer>
+
+
 
 
 
