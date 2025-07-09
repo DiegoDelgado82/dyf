@@ -302,68 +302,36 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 	</div>
 	</section>
 
-	<!-- Sección Ubicación -->	
-	<section class="elementor-section elementor-top-section elementor-element elementor-element-348a9a0 jedv-enabled--yes elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="348a9a0" data-element_type="section">
-		<div class="elementor-container elementor-column-gap-default">
-			<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a302f1c" data-id="a302f1c" data-element_type="column">
-				<div class="elementor-widget-wrap elementor-element-populated">
-					<div class="elementor-element elementor-element-57480f2 dce_masking-none elementor-widget elementor-widget-image" data-id="57480f2" data-element_type="widget" data-widget_type="image.default">
-						<div class="elementor-widget-container">
-							<div class="dce-animations"><img width="70" height="100" src="BARBARA/rfe.png" class="attachment-large size-large wp-image-3930" alt="">											</div>		</div>
-					</div>
-					<div class="elementor-element elementor-element-bae7875 elementor-widget elementor-widget-heading" data-id="bae7875" data-element_type="widget" data-widget_type="heading.default">
-						<div class="elementor-widget-container">
-							<h2 class="elementor-heading-title elementor-size-default">SALÓN LA CAYETANA</h2>
-						</div>
-					</div>
-					<div class="elementor-element elementor-element-ddf54fe elementor-widget elementor-widget-heading" data-id="ddf54fe" data-element_type="widget" data-widget_type="heading.default">
-						<div class="elementor-widget-container">
-							<h2 class="elementor-heading-title elementor-size-default">Río Negro 4000. Córdoba Capital</h2>
-						</div>
-					</div>
-					<div class="elementor-element elementor-element-a8abe9b elementor-widget elementor-widget-jet-listing-dynamic-field" data-id="a8abe9b" data-element_type="widget" data-widget_type="jet-listing-dynamic-field.default">
-						<div class="elementor-widget-container">
-							<div class="jet-listing jet-listing-dynamic-field display-inline">
-								<div class="jet-listing-dynamic-field__inline-wrap"><div class="jet-listing-dynamic-field__content text-dark">21:30 HS</div></div>
-							</div>
-						</div>
-					</div>
-					<section class="elementor-section elementor-inner-section elementor-element elementor-element-95ac164 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="95ac164" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-							<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-05678c3" data-id="05678c3" data-element_type="column">
-								<div class="elementor-widget-wrap">
-								</div>
-							</div>
-							<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-cde4c00" data-id="cde4c00" data-element_type="column">
-								<div class="elementor-widget-wrap elementor-element-populated">
-									<div class="elementor-element elementor-element-98fd08d dce_masking-none elementor-widget elementor-widget-image" data-id="98fd08d" data-element_type="widget" data-widget_type="image.default">
-										<div class="elementor-widget-container">
-											<img width="680" height="383" src="/banners/cayetana.png" class="attachment-large size-large wp-image-179800" alt="" srcset="banners/cayetana.png 680w, banners/cayetana.png 300w" sizes="(max-width: 680px) 100vw, 680px">													
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-e623573" data-id="e623573" data-element_type="column">
-								<div class="elementor-widget-wrap">
-								</div>
-							</div>
-						</div>
-					</section>
-					<div class="elementor-element elementor-element-3b70858 elementor-align-center jedv-enabled--yes elementor-invisible elementor-widget elementor-widget-button" data-id="3b70858" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="button.default">
-						<div class="elementor-widget-container">
-							<div class="elementor-button-wrapper">
-								<!-- Botón -->
-								<div class="text-center mt-3">
-								<button onclick="mostrarMapa()" class="btn btn-outline-dark rounded-pill px-4">VER UBICACIÓN</button>
-								</div>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+<!-- Sección Ubicación -->	
+	<section class="my-5">
+	<div class="container-fluid px-3">
+		<div class="mx-auto p-4 rounded-4 border border-2 shadow text-center"
+			style="border-color: #0d1b3d; background-color: #ffffff; max-width: 1000px;">
+		
+		<!-- Icono de ubicación -->
+		<div class="mb-3">
+			<img width="60" src="BARBARA/rfe.png" class="img-fluid" alt="Ubicación">
 		</div>
+
+		<!-- Título -->
+		<h4 class="text-dark fw-bold font_title">SALÓN LA CAYETANA</h4>
+		<h6 class="text-dark fw-bold font_title">RÍO NEGRO 4000. CÓRDOBA CAPITAL</h6>
+
+		<!-- Hora -->
+		<h4 class="text-dark fw-bold mt-3">21:30 HS</h4>
+
+		<!-- Imagen del salón -->
+		<div class="my-3">
+			<img src="banners/cayetana.png" alt="Salón" class="img-fluid rounded-4" style="max-width: 100%;">
+		</div>
+
+		<!-- Botón ubicación -->
+		<button onclick="mostrarMapa()" class="btn btn-custom-outline rounded-pill px-4">VER UBICACIÓN</button>
+
+		</div>
+	</div>
 	</section>
+
 
 <script>
   function mostrarMapa() {
@@ -379,9 +347,9 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
-        <a href="https://maps.app.goo.gl/YHzDs6LJWp81GuJ4A" target="_blank" class="btn btn-outline-dark rounded-pill px-4">
-          Abrir en Google Maps
-        </a>
+        <button onclick="Swal.close()" class="btn btn-outline-dark rounded-pill px-4">
+  			Cerrar
+		</button>
       `,
       width: '90%',
       background: '#fff',
