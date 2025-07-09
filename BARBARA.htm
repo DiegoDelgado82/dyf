@@ -257,34 +257,41 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 
 <!-- Sección Ubicación -->	
 	<section class="my-5">
-	<div class="container-fluid px-3">
-		<div class="mx-auto p-4 rounded-4 border border-3 shadow text-center"
-     style="border-color: #D4AF37 !important; background-color: #ffffff; max-width: 1000px;">
-			
-		
-		<!-- Icono de ubicación -->
-		<div class="mb-3">
-			<img width="60" src="BARBARA/rfe.png" class="img-fluid" alt="Ubicación">
-		</div>
+  <div class="container-fluid px-3">
+    <div class="mx-auto p-4 rounded-4 border border-1 shadow text-center"
+      style="border-color: #D4AF37 !important; background-color: #ffffff; max-width: 1000px;">
 
-		<!-- Título -->
-		<h4 class="text-dark fw-bold font_title">SALÓN LA CAYETANA</h4>
-		<h6 class="text-dark fw-bold font_title">RÍO NEGRO 4000. CÓRDOBA CAPITAL</h6>
+      <!-- Icono de ubicación -->
+      <div class="mb-3">
+        <img width="60" src="BARBARA/rfe.png" class="img-fluid" alt="Ubicación">
+      </div>
 
-		<!-- Hora -->
-		<h4 class="text-dark fw-bold mt-3 font_title">21:30 HS</h4>
+      <!-- Título -->
+      <h4 class="text-dark fw-bold font_title">SALÓN LA CAYETANA</h4>
+      <h6 class="text-dark fw-bold font_title">RÍO NEGRO 4000. CÓRDOBA CAPITAL</h6>
 
-		<!-- Imagen del salón -->
-		<div class="my-3">
-			<img src="banners/cayetana.png" alt="Salón" class="img-fluid rounded-4" style="max-width: 100%;">
-		</div>
+      <!-- Hora -->
+      <h4 class="text-dark fw-bold mt-3 font_title">21:30 HS</h4>
 
-		<!-- Botón ubicación -->
-		<button onclick="mostrarMapa()" class="btn btn-custom-outline rounded-pill px-4">VER UBICACIÓN</button>
+      <!-- Video del salón -->
+      <div class="my-3">
+        <video class="rounded-4 w-100" autoplay muted controls playsinline>
+  <source src="BARBARA/CAYETANA.mp4" type="video/mp4">
+  Tu navegador no soporta la reproducción de video.
+</video>
+<script>
+  const video = document.querySelector('video');
+  video.volume = 0.5; // Cuando el usuario active el sonido, estará al 50%
+</script>
+      </div>
 
-		</div>
-	</div>
-	</section>
+      <!-- Botón ubicación -->
+      <button onclick="mostrarMapa()" class="btn btn-custom-outline rounded-pill px-4">VER UBICACIÓN</button>
+
+    </div>
+  </div>
+</section>
+
 
 
 <script>
@@ -323,7 +330,7 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 <!-- Sección Dress Code -->				
 <section class="my-0 p-0"> 
   <div class="container-fluid px-3">
-    <div class="mx-auto p-4 rounded-4 border border-3 shadow"
+    <div class="mx-auto p-4 rounded-4 border border-1 shadow"
      style="border-color: #D4AF37 !important; background-color: #ffffff; max-width: 1000px;">
     
       <div class="text-center mb-0">
@@ -344,7 +351,7 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 	<!-- Sección Asistencia -->					
 	<section class="my-5">
 	<div class="container-fluid px-3">
-		<div class="mx-auto p-4 rounded-4 border border-3 shadow text-center"
+		<div class="mx-auto p-4 rounded-4 border border-1 shadow text-center"
      style="border-color: #D4AF37 !important; background-color: #ffffff; max-width: 1000px;">
 		
 		<div class="text-center mb-4">
@@ -420,7 +427,7 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
   		<img src="banners/azulSuperior.png" class="img-fluid d-block w-100" alt="Decoración azul superior">
 	</div>		
 	<div class="container-fluid px-3 " style="background-color:#0d1b3d">
-	<div class="mx-auto p-4 rounded-4 border border-3 shadow text-center"
+	<div class="mx-auto p-4 rounded-4 border border-1 shadow text-center"
      style="border-color: #D4AF37 !important; background-color: #ffffff; max-width: 1000px;">
 
 		<div class="text-center mb-4">
@@ -485,7 +492,7 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 	<!-- Sección Canciones -->				
 	<section class="my-5">
 	<div class="container-fluid px-3">
-		<div class="mx-auto p-4 rounded-4 border border-3 shadow text-center"
+		<div class="mx-auto p-4 rounded-4 border border-1 shadow text-center"
      style="border-color: #D4AF37 !important; background-color: #ffffff; max-width: 1000px;">
 		
 		<div class="text-center mb-4">
@@ -537,7 +544,7 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 	<footer style="background-color: #0d1b3d; padding: 2rem 1rem; text-align: center; color: white;">
   <!-- Audio -->
   <audio id="track">
-    <source src="BARBARA/Blank Space.mp3" type="audio/mpeg">
+    <source src="BARBARA/BRUNO.mp3" type="audio/mpeg">
   </audio>
 
   <!-- Texto con enlace -->
