@@ -3,9 +3,15 @@
 <meta charset="utf-8">
 <meta name="robots" content="max-image-preview:large">
 <title>BARBARA</title>
+
+<scriptee>
+
+</scripte>
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></scrip>
 <script src="BARBARA/js" data-cfasync="false" data-wpfc-render="false" async=""></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <link rel="stylesheet" id="dce-animations-css" href="BARBARA/animations.css" media="all">
 <link rel="stylesheet" id="bdt-uikit-css" href="BARBARA/bdt-uikit.css" media="all">
 <link rel="stylesheet" id="ep-helper-css" href="BARBARA/ep-helper.css" media="all">
@@ -379,7 +385,7 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 			
 			<div class="mb-3">
 			<label for="nombreCancion" class="form-label text-dark">Nombre de la canción</label>
-			<input type="text" id="nombreCancion" class="form-control rounded-pill py-2 px-4 bg_input  border-0" placeholder="Ej: Mi canción favorita" required>
+			<input type="text" id="nombreCancion" class="form-control rounded-pill py-2 px-4 bg_input text-white  border-0" placeholder="Ej: Mi canción favorita" required>
 			</div>
 
 			<div class="mb-3">
@@ -389,7 +395,7 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 
 			<div class="mb-3">
 			<label for="enlace" class="form-label text-dark">Enlace (Spotify, YouTube...)</label>
-			<input type="url" id="enlace" class="form-control rounded-pill py-2 px-4 bg_input text-white border-0" placeholder="https://..." required>
+			<input type="url" id="enlace" class="form-control rounded-pill py-2 px-4 bg_input text-white border-0" placeholder="https://..." >
 			</div>
 
 			<div class="text-center">
@@ -415,36 +421,48 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 			</div>
 			<h4 class="elementor-heading-title elementor-size-default text-dark font_title fw-bold">CONFIRMACIÓN DE ASISTENCIA</h4>
 			<p class="text-dark font_p">Ademas de la asistencia es importante que nos hagas saber si tenemos que contemplar algún tipo de alergia o intolerancia a alimentos.</p>
-			<h4 class="text-dark fw-bold">¿Vas a venir a la fiesta?</h4>
 			<p class="text-dark font_p">¡Contanos si podés asistir y con cuántos acompañantes!</p>
 		</div>
 
 		<form id="formAsistencia" class="mx-auto text-dark " style="max-width: 600px;">
 			
 			<div class="mb-3">
-			<label class="form-label text-dark">Confirmá tu asistencia</label><br>
-			<div class="form-check form-check-inline">
-				<input class="form-check-input" type="radio" name="asistencia" id="asistire" value="Sí" required>
-				<label class="form-check-label" for="asistire">Sí, confirmo</label>
+				<label class="form-label text-dark">Confirmá tu asistencia</label><br>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="asistencia" id="asistire" value="Sí" required>
+					<label class="form-check-label" for="asistire">Sí, confirmo</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="asistencia" id="noAsistire" value="No" required>
+					<label class="form-check-label" for="noAsistire">No puedo</label>
+				</div>
 			</div>
-			<div class="form-check form-check-inline">
-				<input class="form-check-input" type="radio" name="asistencia" id="noAsistire" value="No" required>
-				<label class="form-check-label" for="noAsistire">No puedo</label>
+			<div class="mb-3">
+				<label for="nombre" class="form-label text-dark">Nombre completo</label>
+				<input type="text" id="nombre" name="nombre" class="form-control rounded-pill py-2 px-4 bg_input text-white border-0" placeholder="Ej: Juan Pérez" required>
 			</div>
+			<div class="mb-3">
+				<label for="telefono" class="form-label text-dark">Teléfono</label>
+				<input type="tel" id="telefono" name="telefono" class="form-control rounded-pill py-2 px-4 bg_input text-white border-0" placeholder="Ej: 3512345678" required>
+			</div>
+
+
+			<div class="mb-3">
+				<label for="adultos" class="form-label text-dark">¿Cuántos adultos vienen?</label>
+				<input type="number" id="adultos" name="adultos" class="form-control rounded-pill py-2 px-4 text-white border-0 bg_input" min="0" placeholder="Ej: 2">
 			</div>
 
 			<div class="mb-3">
-			<label for="adultos" class="form-label text-dark">¿Cuántos adultos vienen?</label>
-			<input type="number" id="adultos" name="adultos" class="form-control rounded-pill py-2 px-4 text-white border-0 bg_input" min="0" placeholder="Ej: 2">
+				<label for="menores" class="form-label text-dark">¿Cuántos menores vienen?</label>
+				<input type="number" id="menores" name="menores" class="form-control rounded-pill py-2 px-4 text-white border-0 bg_input  " min="0" placeholder="Ej: 1">
 			</div>
-
-			<div class="mb-3">
-			<label for="menores" class="form-label text-dark">¿Cuántos menores vienen?</label>
-			<input type="number" id="menores" name="menores" class="form-control rounded-pill py-2 px-4 text-white border-0 bg_input  " min="0" placeholder="Ej: 1">
-			</div>
+			<div class="mb-4">
+          		<label for="mensaje" class="form-label text-dark fw-bold">Si necesitás realizar alguna observación</label>
+         		<textarea id="mensaje" name="mensaje" class="form-control rounded-4 bg_input text-white border-0" rows="4" placeholder="Ej: Llego más tarde, uso silla de ruedas, etc."></textarea>
+        	</div>
 
 			<div class="text-center">
-			<button type="submit" class="btn btn-outline-dark rounded-pill px-4">CONFIRMAR</button>
+				<button type="submit" class="btn btn-outline-dark rounded-pill px-4">CONFIRMAR</button>
 			</div>
 
 		</form>
@@ -595,55 +613,118 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 
 <!-- SDK Firebase v9+ (modular) -->
 <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyAw6CUWAMFJ35SIziP-0gpN06vRxkScI6k",
-    authDomain: "fiestabarbara.firebaseapp.com",
-    projectId: "fiestabarbara",
-    storageBucket: "fiestabarbara.firebasestorage.app",
-    messagingSenderId: "75513074857",
-    appId: "1:75513074857:web:2ac09043c23ae64175c5b8",
-    measurementId: "G-M2XPL4SQTT"
-  };
+  
 
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
+  const formAsistencia = document.getElementById("formAsistencia");
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("formularioInvitados");
+  formAsistencia.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
+    const nombre = formAsistencia.nombre.value.trim();
+    const telefono = formAsistencia.telefono.value.trim();
+    const asistencia = formAsistencia.asistencia.value;
+    const adultos = formAsistencia.adultos.value || 0;
+    const menores = formAsistencia.menores.value || 0;
+    const mensaje = formAsistencia.mensaje.value;
 
-      const asistencia = form.querySelector('input[name="asistencia"]:checked')?.value;
-      const nombre = form.querySelector("#nombre").value.trim();
-      const telefono = form.querySelector("#telefono").value.trim();
-      const mensaje = form.querySelector("#mensaje").value.trim();
+    if (!nombre || !telefono || !asistencia) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Faltan datos',
+        text: 'Por favor completá todos los campos requeridos.',
+        confirmButtonColor: '#0d1b3d'
+      });
+      return;
+    }
 
-      if (!asistencia || !nombre || !telefono) {
-        alert("Por favor completá todos los campos requeridos.");
-        return;
-      }
+    try {
+      await addDoc(collection(db, "asistencias"), {
+        nombre,
+        telefono,
+        asistencia,
+        adultos: parseInt(adultos),
+        menores: parseInt(menores),
+        mensaje,
+        timestamp: new Date()
+      });
 
-      try {
-        await addDoc(collection(db, "invitados"), {
-          nombre,
-          telefono,
-          asistencia,
-          mensaje,
-          timestamp: new Date()
-        });
+      Swal.fire({
+        icon: 'success',
+        title: '¡Gracias!',
+        text: 'Tu asistencia fue confirmada correctamente.',
+        confirmButtonColor: '#0d1b3d'
+      });
 
-        alert("✅ ¡Gracias por confirmar! Tu respuesta fue registrada.");
-        form.reset();
-      } catch (err) {
-        console.error("Error al guardar en Firestore:", err);
-        alert("❌ Error al enviar. Intentá nuevamente.");
-      }
-    });
+      formAsistencia.reset();
+    } catch (error) {
+      console.error("Error al guardar en Firestore:", error);
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Hubo un problema al enviar los datos.',
+        confirmButtonColor: '#dc3545'
+      });
+    }
   });
 </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+
+  
+  const formCanciones = document.getElementById("formCanciones");
+
+  formCanciones.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const nombreCancion = document.getElementById("nombreCancion").value.trim();
+    const autor = document.getElementById("autor").value.trim();
+    const enlace = document.getElementById("enlace").value.trim();
+
+    if (!nombreCancion || !autor ) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Faltan datos',
+        text: 'Completá todos los campos antes de enviar.',
+        confirmButtonColor: '#0d1b3d'
+      });
+      return;
+    }
+
+    try {
+      await addDoc(collection(db, "canciones"), {
+        nombreCancion,
+        autor,
+        enlace,
+        timestamp: new Date()
+      });
+
+      Swal.fire({
+        icon: 'success',
+        title: '¡Enviado!',
+        text: 'Gracias por sugerir una canción 🎶',
+        confirmButtonColor: '#0d1b3d'
+      });
+
+      formCanciones.reset();
+    } catch (error) {
+      console.error("Error al guardar en Firestore:", error);
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'No se pudo enviar tu sugerencia. Intentá nuevamente.',
+        confirmButtonColor: '#dc3545'
+      });
+    }
+  });
+</script>
+
+
 
 </html>
