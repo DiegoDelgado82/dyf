@@ -1,3 +1,21 @@
+
+.bg_input
+
+{
+  background-color: #0f1e3d !important;
+}
+
+.font_title
+{
+  font-family: "Montserrat", Sans-serif;
+}
+
+.font_p
+{
+  font-family: "Times New Roman", Sans-serif;
+  font-style: oblique;
+}
+
 /* vietnamese */
 @font-face {
   font-family: 'Meow Script';
