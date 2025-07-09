@@ -113,16 +113,16 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 
 
 <!-- Sección principal con fondo -->
-<section style="position: relative; background: url('barbara.jpeg') center/cover no-repeat; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+<section style="position: relative; background: url('barbara.jpeg') center/cover no-repeat; min-height: 100vh; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 160px;">
   <!-- Capa oscura -->
   <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 0;"></div>
 
   <!-- Contenido -->
-  <div style="position: relative; z-index: 1; text-align: center; color: #fff;">
-    <h1 style="font-size: clamp(64px, 10vw, 128px); font-weight: bold; text-shadow: 2px 2px 4px black;">Bárbara</h1>
-    <h2 style="font-size: 1.5rem; letter-spacing: 2px;">MIS 15 AÑOS</h2>
+  <div style="position: relative; z-index: 10; text-align: center; color: #fff ;">
+    <h1 style="font-size: clamp(80px, 10vw, 128px); font-weight: bold; text-shadow: 2px 2px 4px black;">Bárbara</h1>
+    <h2 style="font-size: 2rem; letter-spacing: 2px;">MIS 15 AÑOS</h2>
     <div style="margin-top: 1rem;">
-      <span style="border: 2px solid #fff; border-radius: 2rem; padding: 0.5rem 1.5rem; display: inline-block; font-size: 1rem;">23.11.2025</span>
+      <span style="border: 2px solid #fff; background-color:#0d1b3d; padding: 1rem; border-radius: 1rem; border-radius: 2rem; padding: 0.5rem 2rem; display: inline-block; font-size: 2rem;">23/11/2025</span>
     </div>
   </div>
 
@@ -182,10 +182,10 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
     const seconds = Math.floor((diff / 1000) % 60);
 
     const html = `
-      ${days}<span style="font-size:0.3em;">DÍAS</span> 
-      ${hours.toString().padStart(2, '0')}<span style="font-size:0.3em;">HS</span> 
-      ${minutes.toString().padStart(2, '0')}<span style="font-size:0.3em;">MIN</span> 
-      ${seconds.toString().padStart(2, '0')}<span style="font-size:0.3em;">SEG</span>
+      ${days}<span style="font-size:0.4em;">DÍAS</span> 
+      ${hours.toString().padStart(2, '0')}<span style="font-size:0.4em;">HS</span> 
+      ${minutes.toString().padStart(2, '0')}<span style="font-size:0.4em;">MIN</span> 
+      ${seconds.toString().padStart(2, '0')}<span style="font-size:0.4em;">SEG</span>
     `;
 
     document.getElementById("compactCountdown").innerHTML = html;
@@ -201,7 +201,7 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
   		<img src="banners/azulSuperior.png" class="img-fluid d-block w-100" alt="Decoración azul superior">
 	</div>	
 	<section class="section-fotos">
-	<div class="container-fluid px-3"style="border-color: #0d1b3d; background-color: #0f1e3d;">
+	<div class="container-fluid px-3"style="background-color: #0f1e3d;">
 		<div >
 
 		<div class="mb-3 text-center ">
@@ -258,8 +258,9 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 <!-- Sección Ubicación -->	
 	<section class="my-5">
 	<div class="container-fluid px-3">
-		<div class="mx-auto p-4 rounded-4 border border-2 shadow text-center"
-			style="border-color: #0d1b3d; background-color: #ffffff; max-width: 1000px;">
+		<div class="mx-auto p-4 rounded-4 border border-3 shadow text-center"
+     style="border-color: #D4AF37 !important; background-color: #ffffff; max-width: 1000px;">
+			
 		
 		<!-- Icono de ubicación -->
 		<div class="mb-3">
@@ -322,8 +323,8 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 <!-- Sección Dress Code -->				
 <section class="my-0 p-0"> 
   <div class="container-fluid px-3">
-    <div 
-         style="border-color: #0d1b3d; background-color: #ffffff; max-width: 1000px; margin-bottom: 0;"><!-- div class="mx-auto p-4 rounded-4 border border-2 shadow" -->
+    <div class="mx-auto p-4 rounded-4 border border-3 shadow"
+     style="border-color: #D4AF37 !important; background-color: #ffffff; max-width: 1000px;">
     
       <div class="text-center mb-0">
         <div class="mb-3">
@@ -337,17 +338,14 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
   </div>
 </section>
 
-<!-- Imagen pegada sin espacio -->
-<div class="w-100" style="margin-top: -40px;"> <!-- Leve solapado opcional -->
-  <img src="banners/asdqw.png" class="img-fluid d-block w-100" alt="Decoración azul inferior">
-</div>
+
 
 
 	<!-- Sección Asistencia -->					
 	<section class="my-5">
 	<div class="container-fluid px-3">
-		<div class="mx-auto p-4 rounded-4 border border-2 shadow"
-			style="border-color: #0d1b3d; background-color: #ffffff; max-width: 1000px;">
+		<div class="mx-auto p-4 rounded-4 border border-3 shadow text-center"
+     style="border-color: #D4AF37 !important; background-color: #ffffff; max-width: 1000px;">
 		
 		<div class="text-center mb-4">
 			<div class="elementor-widget-container">
@@ -363,11 +361,11 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 			
 			<div class="mb-3">
 				<label class="form-label text-dark">Confirmá tu asistencia</label><br>
-				<div class="form-check form-check-inline">
+				<div class="form-check form-check-inline fw-bold">
 					<input class="form-check-input" type="radio" name="asistencia" id="asistire" value="Sí" required>
 					<label class="form-check-label" for="asistire">Sí, confirmo</label>
 				</div>
-				<div class="form-check form-check-inline">
+				<div class="form-check form-check-inline fw-bold">
 					<input class="form-check-input" type="radio" name="asistencia" id="noAsistire" value="No" required>
 					<label class="form-check-label" for="noAsistire">No puedo</label>
 				</div>
@@ -376,10 +374,7 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 				<label for="nombre" class="form-label text-dark">Nombre completo</label>
 				<input type="text" id="nombre" name="nombre" class="form-control rounded-pill py-2 px-4 bg_input text-white border-0" placeholder="Ej: Juan Pérez" required>
 			</div>
-			<div class="mb-3">
-				<label for="telefono" class="form-label text-dark">Teléfono</label>
-				<input type="tel" id="telefono" name="telefono" class="form-control rounded-pill py-2 px-4 bg_input text-white border-0" placeholder="Ej: 3512345678" required>
-			</div>
+			
 
 
 			<div class="mb-4">
@@ -404,7 +399,7 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
   </div>
 </div>
 			<div class="mb-4">
-          		<label for="mensaje" class="form-label text-dark fw-bold">Si necesitás realizar alguna observación</label>
+          		<label for="mensaje" class="form-label text-dark ">Mensaje</label>
          		<textarea id="mensaje" name="mensaje" class="form-control rounded-4 bg_input text-white border-0" rows="4" placeholder="Ej: Llego más tarde, uso silla de ruedas, etc."></textarea>
         	</div>
 
@@ -421,9 +416,12 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 
 	<!-- Sección Regalos -->				
 	<section class="my-5">
-	<div class="container-fluid px-3">
-		<div class="mx-auto p-4 rounded-4 border border-2 shadow"
-			style="border-color: #0d1b3d; background-color: #ffffff; max-width: 1000px;">
+	<div class="w-100">
+  		<img src="banners/azulSuperior.png" class="img-fluid d-block w-100" alt="Decoración azul superior">
+	</div>		
+	<div class="container-fluid px-3 " style="background-color:#0d1b3d">
+	<div class="mx-auto p-4 rounded-4 border border-3 shadow text-center"
+     style="border-color: #D4AF37 !important; background-color: #ffffff; max-width: 1000px;">
 
 		<div class="text-center mb-4">
 			<div class="mb-3">
@@ -433,11 +431,13 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 			<h4 class="text-dark fw-bold font_title">REGALOS</h4>
 			<p class="text-dark" style="font-size: 0.95rem;">Tu presencia es lo más importante, pero si querés hacernos un regalo podés usar los datos que se mostrarán a continuación.</p>
 			
-			<button class="btn btn-custom-outline rounded-pill px-4 my-3" onclick="mostrarDatosRegalo()">VER DATOS</button>
+			<button class="btn btn-custom-outline rounded-pill px-4 my-3" onclick="mostrarDatosRegalo()">VER CUENTA</button>
 		</div>
 
 		</div>
-	</div>
+	</div><div class="w-100">
+  		<img src="banners/azulInferior.png" class="img-fluid d-block w-100" alt="Decoración azul superior">
+	</div>	
 	</section>
 	<script>
 	function mostrarDatosRegalo() {
@@ -485,8 +485,8 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
 	<!-- Sección Canciones -->				
 	<section class="my-5">
 	<div class="container-fluid px-3">
-		<div class="mx-auto p-4 rounded-4 border border-2 shadow"
-			style="border-color: #0d1b3d; background-color: #ffffff; max-width: 1000px;">
+		<div class="mx-auto p-4 rounded-4 border border-3 shadow text-center"
+     style="border-color: #D4AF37 !important; background-color: #ffffff; max-width: 1000px;">
 		
 		<div class="text-center mb-4">
 			<div class="mb-3">
@@ -541,15 +541,15 @@ body{--wp--preset--color--black: white;--wp--preset--color--cyan-bluish-gray: #a
   </audio>
 
   <!-- Texto con enlace -->
-  <a href="https://grupodyf.com/" style="color: white; font-weight: bold; text-decoration: none;">
+  <a href="https://grupodyf.com/" style="color: white; text-decoration: none;">
     Diseñada por Grupo DyF
   </a>
 
   <!-- Botón flotante -->
-  <button id="play-pause" class="play"
-    style="position: fixed; bottom: 20px; right: 20px; background-color: #0d1b3d; color: white; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 18px; z-index: 9999;">
-    ▶️
-  </button>
+	<button id="play-pause" class="play"
+		style="position: fixed; bottom: 20px; left: 20px; background-color: #0d1b3d; color: white; border: 2px solid white; border-radius: 50%; width: 50px; height: 50px; font-size: 18px; z-index: 9999;">
+		▶️
+	</button>
 
   <!-- Script -->
   <script>
