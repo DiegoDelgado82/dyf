@@ -16,6 +16,32 @@
   font-style: oblique;
 }
 
+.btn-custom-outline {
+    border: 2px solid #0d1b3d;
+    color: #0d1b3d;
+    background-color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+  }
+
+  .btn-custom-outline:hover {
+    background-color: #0d1b3d;
+    color: white;
+  }
+
+  .play_blue
+  {
+    
+    color: #0d1b3d;
+    
+   
+  
+  
+  }
+
+
+
 /* vietnamese */
 @font-face {
   font-family: 'Meow Script';
