@@ -802,12 +802,13 @@
     </section>
     <script>
       function mostrarDatosRegalo() {
-        const alias = "barbara.cumple.mp";
+        const alias = "bardelgadoo.mp";
 
         Swal.fire({
           title: "Datos para regalo",
           html: `
 			<p><strong>Alias:</strong> ${alias}</p>
+      <p><strong>Nombre:</strong> ${"Bárbara Delgado"}</p>
 			<button id="btnCopiarAlias" class="btn btn-outline-dark rounded-pill mt-2">Copiar alias</button>
 		`,
           showConfirmButton: false,
@@ -822,11 +823,13 @@
                   .writeText(alias)
                   .then(() => {
                     Swal.fire({
-                      icon: "success",
-                      title: "¡Alias copiado!",
-                      text: "Podés pegarlo donde lo necesites.",
-                      confirmButtonColor: "#0d1b3d",
-                    });
+  icon: "success",
+  title: "¡Alias copiado!",
+  text: "Podés pegarlo donde lo necesites.",
+  showConfirmButton: false,
+  timer: 1000,
+  timerProgressBar: true,
+});
                   })
                   .catch(() => {
                     Swal.fire({
