@@ -53,6 +53,18 @@ input[type="radio"].form-check-input {
   box-shadow: none;
 }
 
+.fade-on-scroll {
+  opacity: 0;
+  transition: opacity 1.6s ease;
+}
+
+.fade-on-scroll.visible {
+  opacity: 1;
+}
+
+
+
+
 
 /* vietnamese */
 @font-face {

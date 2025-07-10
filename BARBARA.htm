@@ -251,7 +251,7 @@
   src="BARBARA/floresAI.png"
   style="
     position: absolute;
-    top: 0px;
+    top: -55px;
     left: 0px;
     width: 320px;
     opacity: 0;
@@ -268,7 +268,8 @@
         style="
           position: absolute;
           bottom: 0;
-          right: 0;
+          top: 400px;
+    left: 300px;
           width: 320px;
           opacity: 0;
           animation: aparecer 1.8s ease-in-out forwards;
@@ -310,12 +311,12 @@
         text-align: center;
       "
     >
-		<h2 class="text-dark fw-bold font_title">Faltan</h2>
+		<h2 class="text-dark fw-bold font_title">FALTAN</h2>
       <div
         style="
           font-family: 'Poppins', sans-serif;
           font-weight: bold;
-          font-size: 2.8rem;
+          font-size: 2.6rem;
           color: #0d1b3d;
         "
         id="compactCountdown"
@@ -342,16 +343,16 @@
         const seconds = Math.floor((diff / 1000) % 60);
 
         const html = `
-      ${days}<span style="font-size:0.4em;">DÍAS</span> 
+      ${days}<span style="font-size:0.3em;">DÍAS</span> 
       ${hours
         .toString()
-        .padStart(2, "0")}<span style="font-size:0.4em;">HS</span> 
+        .padStart(2, "0")}<span style="font-size:0.3em;">HS</span> 
       ${minutes
         .toString()
-        .padStart(2, "0")}<span style="font-size:0.4em;">MIN</span> 
+        .padStart(2, "0")}<span style="font-size:0.3em;">MIN</span> 
       ${seconds
         .toString()
-        .padStart(2, "0")}<span style="font-size:0.4em;">SEG</span>
+        .padStart(2, "0")}<span style="font-size:0.3em;">SEG</span>
     `;
 
         document.getElementById("compactCountdown").innerHTML = html;
@@ -372,7 +373,7 @@
     <section class="section-fotos">
       <div class="container-fluid px-3" style="background-color: #0f1e3d">
         <div>
-          <div class="mb-3 text-center">
+          <div class="fade-on-scroll mb-3 text-center">
             <img
               width="180"
               height="106"
@@ -486,7 +487,7 @@
           "
         >
           <!-- Icono de ubicación -->
-          <div class="mb-3">
+          <div class="fade-on-scroll mb-3">
             <img
               width="120"
               height="106"
@@ -507,7 +508,7 @@
 
           <!-- Video del salón -->
           <div class="my-3">
-            <video class="rounded-4 w-100" autoplay muted controls playsinline>
+            <video class="rounded-4 w-100" autoplay muted loop playsinline>
               <source src="BARBARA/CAYETANA.mp4" type="video/mp4" />
               Tu navegador no soporta la reproducción de video.
             </video>
@@ -568,8 +569,8 @@
             max-width: 1000px;
           "
         >
-          <div class="text-center mb-0">
-            <div class="mb-3">
+          <div class=" text-center mb-0">
+            <div class="fade-on-scroll mb-3">
               <img
                 width="180"
                 height="106"
@@ -597,7 +598,7 @@
           "
         >
           <div class="text-center mb-4">
-            <div class="elementor-widget-container">
+            <div class="fade-on-scroll elementor-widget-container">
               <img
                 width="180"
                 
@@ -765,7 +766,7 @@
             max-width: 1000px;
           "
         >
-          <div class="text-center mb-4">
+          <div class="fade-on-scroll text-center mb-4">
             <div class="mb-3">
               <img
                 width="180"
@@ -855,7 +856,7 @@
             max-width: 1000px;
           "
         >
-          <div class="text-center mb-4">
+          <div class="fade-on-scroll text-center mb-4">
             <div class="mb-3">
               <img
                 width="180"
@@ -1005,6 +1006,31 @@
     </footer>
 
  
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    document.querySelectorAll('.fade-on-scroll').forEach((el) => {
+      observer.observe(el);
+    });
+  });
+</script>
+
+
+
     
     
   </body>
