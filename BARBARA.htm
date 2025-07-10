@@ -1046,8 +1046,17 @@
     const ninios = parseInt(form.ninios.value) || 0;
     const mensaje = form.mensaje.value;
 
+        Swal.fire({
+      title: 'Enviando confirmación...',
+      text: 'Por favor, aguardá un momento',
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+      didOpen: () => {
+        Swal.showLoading();
+      }
+    });
+
     try {
-      // Guardar en Firestore
       await addDoc(collection(db, "asistencias"), {
         asistencia,
         nombre,
@@ -1059,14 +1068,26 @@
         timestamp: new Date()
       });
 
-      alert("¡Gracias por confirmar tu asistencia!");
+      Swal.fire({
+        icon: 'success',
+        title: '¡Asistencia confirmada!',
+        text: 'Gracias por tu respuesta 🤍',
+        confirmButtonText: 'Aceptar'
+      });
+
       form.reset();
     } catch (error) {
       console.error("Error al enviar los datos:", error);
-      alert("Hubo un error al enviar el formulario. Intentalo de nuevo.");
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Ocurrió un problema al enviar los datos. Intentá de nuevo.',
+        confirmButtonText: 'Aceptar'
+      });
     }
   });
-  </script>
+</script>
+  
 
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
