@@ -310,6 +310,7 @@
         text-align: center;
       "
     >
+		<h2 class="text-dark fw-bold font_title">Faltan</h2>
       <div
         style="
           font-family: 'Poppins', sans-serif;
@@ -625,36 +626,30 @@
             class="mx-auto text-dark"
             style="max-width: 600px"
           >
-            <div class="mb-3">
-              <label class="form-label text-dark">Confirmá tu asistencia</label
-              ><br />
-              <div class="form-check form-check-inline fw-bold">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="asistencia"
-                  id="asistire"
-                  value="Sí"
-                  required
-                />
-                <label class="form-check-label" for="asistire"
-                  >Sí, confirmo</label
-                >
-              </div>
-              <div class="form-check form-check-inline fw-bold">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="asistencia"
-                  id="noAsistire"
-                  value="No"
-                  required
-                />
-                <label class="form-check-label" for="noAsistire"
-                  >No puedo</label
-                >
-              </div>
-            </div>
+        <div class="form-check form-check-inline fw-bold">
+  <input
+    class="form-check-input"
+    type="radio"
+    name="asistencia"
+    id="asistire"
+    value="Sí"
+    required
+    checked
+  />
+  <label class="form-check-label" for="asistire">Sí, confirmo</label>
+</div>
+<div class="form-check form-check-inline fw-bold">
+  <input
+    class="form-check-input"
+    type="radio"
+    name="asistencia"
+    id="noAsistire"
+    value="No"
+    required
+  />
+  <label class="form-check-label" for="noAsistire">No puedo</label>
+</div>
+
             <div class="mb-3">
               <label for="nombre" class="form-label text-dark"
                 >Nombre completo</label
@@ -738,8 +733,8 @@
                 placeholder="Ej: Llego más tarde, uso silla de ruedas, etc."
               ></textarea>
             </div>
-
             <div class="text-center">
+				<em><h5>No te olvides de confirmar antes del 31/8/2025</h5></em>
               <button
                 type="submit"
                 class="btn btn-custom-outline rounded-pill px-4"
