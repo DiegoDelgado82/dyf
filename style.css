@@ -1,5 +1,5 @@
 :root {
-  --color-principal: #F59E0B;
+  --color-principal: #ffa823;
   --color-texto: #000000;
 }
 
@@ -91,4 +91,27 @@ footer {
   color: white;
   text-shadow: 2px 2px 4px black;
   font-weight: bold
+}
+/* style.css */
+
+body {
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo {
+  max-height: 300px;
+}
+
+.card img {
+  object-fit: cover;
+  height: 200px;
+}
+
+footer {
+  background-color: #0e1e3d;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }
