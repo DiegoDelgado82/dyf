@@ -677,6 +677,20 @@
                 required
               />
             </div>
+            <div class="mb-3">
+  <label for="DNI" class="form-label text-dark">Número de Documento</label>
+  <input
+    type="text"
+    id="DNI"
+    name="DNI"
+    maxlength="8"
+    pattern="\d{1,8}"
+    class="form-control rounded-pill py-2 px-4 bg_input text-white border-0"
+    placeholder="59999999"
+    required
+    oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,8)"
+  />
+</div>
 
             
             <div class="mb-4">
@@ -908,9 +922,7 @@
       "
     >
       <!-- Audio -->
-      <audio id="track">
-        <source src="BARBARA/BRUNO.mp3" type="audio/mpeg" />
-      </audio>
+     
 
       <!-- Texto con enlace -->
       <a
@@ -921,46 +933,9 @@
       </a>
 
       <!-- Botón flotante -->
-      <button
-        id="play-pause"
-        class="play"
-        style="
-          position: fixed;
-          bottom: 20px;
-          left: 20px;
-          background-color: #0d1b3d;
-          color: white;
-          border: 2px solid white;
-          border-radius: 50%;
-          width: 50px;
-          height: 50px;
-          font-size: 18px;
-          z-index: 9999;
-        "
-      >
-        ▶️
-      </button>
-
+     
       <!-- Script -->
-      <script>
-        const track = document.getElementById("track");
-        const controlBtn = document.getElementById("play-pause");
-
-        function playPause() {
-          if (track.paused) {
-            track.play();
-            controlBtn.textContent = "⏸️";
-          } else {
-            track.pause();
-            controlBtn.textContent = "▶️";
-          }
-        }
-
-        controlBtn.addEventListener("click", playPause);
-        track.addEventListener("ended", function () {
-          controlBtn.textContent = "▶️";
-        });
-      </script>
+     
     </footer>
 
  
@@ -1020,11 +995,13 @@
     // Capturar los datos
     const asistencia = form.querySelector('input[name="asistencia"]:checked')?.value || "";
     const nombre = form.nombre.value;
+    const DNI= form.DNI.value;
     const adultos = 0;
     const jovenes = 0;
     const menores = 0;
     const ninios = 0;
     const compa = 1;
+
     const mensaje = form.mensaje.value;
 
         Swal.fire({
@@ -1047,6 +1024,7 @@
         ninios,
         mensaje,
         compa,
+        DNI,
         timestamp: new Date()
       });
 
