@@ -194,102 +194,115 @@
     <!-- Sección Foto Principal -->
 
     <!-- Sección principal con fondo -->
-    <section
-      style="
-        position: relative;
-        background: url('barbara.jpeg') center/cover no-repeat;
-        min-height: 100vh;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        padding-bottom: 160px;
-      "
-    >
-      <!-- Capa oscura -->
-      <div
+    <section class="hero-section">
+  <!-- Capa oscura -->
+  <div class="capa-oscura"></div>
+
+  <!-- Flores -->
+  <img src="BARBARA/floresAI.png" class="flores-superior" alt="Flores izquierda" />
+  <img src="BARBARA/floresAD.png" class="flores-inferior" alt="Flores inferior derecha" />
+
+  <!-- Contenido -->
+  <div class="contenido-central">
+    <h1 class="love-light-regular" style="font-size: clamp(90px, 10vw, 128px); text-shadow: 2px 2px 4px black">
+      Bárbara
+    </h1>
+    <h2 style="font-size: 2rem; letter-spacing: 2px">MIS 15 AÑOS</h2>
+    <div style="margin-top: 1rem">
+      <span
         style="
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgba(0, 0, 0, 0.4);
-          z-index: 0;
+          border: 2px solid #fff;
+          background-color: #0d1b3d;
+          padding: 0.5rem 2rem;
+          border-radius: 2rem;
+          display: inline-block;
+          font-size: 2rem;
         "
-      ></div>
-
-      <!-- Contenido -->
-      <div
-        style="position: relative; z-index: 10; text-align: center; color: #fff"
+        >23/11/2025</span
       >
-        <h1 class="love-light-regular"
-          style="
-            font-size: clamp(90px, 10vw, 128px);
-            
-            text-shadow: 2px 2px 4px black;
-          "
-        >
-          Bárbara
-        </h1>
-        <h2 style="font-size: 2rem; letter-spacing: 2px">MIS 15 AÑOS</h2>
-        <div style="margin-top: 1rem">
-          <span
-            style="
-              border: 2px solid #fff;
-              background-color: #0d1b3d;
-              padding: 1rem;
-              border-radius: 1rem;
-              border-radius: 2rem;
-              padding: 0.5rem 2rem;
-              display: inline-block;
-              font-size: 2rem;
-            "
-            >23/11/2025</span
-          >
-        </div>
-      </div>
+    </div>
+  </div>
 
-      <!-- Imagen de mariposas arriba a la izquierda -->
-      <!-- Imagen de flores arriba a la izquierda -->
-      <img
-  src="BARBARA/floresAI.png"
-  style="
+  <!-- Onda decorativa -->
+  <img src="banners/asdqw.png" class="onda-deco" alt="Onda decorativa" />
+</section>
+
+<style>
+  .hero-section {
+    position: relative;
+    background: url('/BARBARA/chateau.png') center top / cover no-repeat;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  .capa-oscura {
     position: absolute;
-    top: -55px;
-    left: 0px;
-    width: 320px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+  }
+
+  .flores-superior {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 450px;
+    opacity: 0;
+    animation: aparecer 1.8s ease-in-out forwards;
+    max-width: 100%;
+    z-index: 2;
+  }
+
+  .flores-inferior {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 450px;
     opacity: 0;
     animation: aparecer 1.8s ease-in-out forwards;
     z-index: 2;
-    transform: rotate(-30deg);
-  "
-  alt="Flores izquierda"
-/>
+  }
 
-      <!-- Imagen de flores abajo a la derecha 
-      <img
-        src="BARBARA/floresAD.png"
-        style="
-          position: absolute;
-          bottom: 0;
-          top: 400px;
-    left: 40px;
-          width: 320px;
-          opacity: 0;
-          animation: aparecer 1.8s ease-in-out forwards;
-          z-index: 2;
-        "
-        alt="Flores derecha"
-      />-->
+  .contenido-central {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+    color: #fff;
+  }
 
-      <!-- Onda decorativa superior (posición inferior visualmente) -->
-      <img
-        src="banners/asdqw.png"
-        style="position: absolute; bottom: 0; left: 0; width: 100%; z-index: 3"
-        alt="Onda superior"
-      />
-    </section>
+  .onda-deco {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+  }
 
+  @media (min-width: 768px) {
+    .hero-section {
+      background-position: center 30%; /* Subir imagen para pantallas grandes */
+    }
+
+    .contenido-central {
+      top: 65%; /* Bajar el texto en pantallas grandes */
+    }
+  }
+
+  @keyframes aparecer {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>
     <!-- Estilos para animaciones -->
     <style>
       @keyframes aparecer {
@@ -1127,72 +1140,85 @@
 </script>
   
 
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
-    import {
-      getFirestore,
-      collection,
-      addDoc,
-    } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
-    const firebaseConfig2 = {
-      apiKey: "AIzaSyAw6CUWAMFJ35SIziP-0gpN06vRxkScI6k",
-      authDomain: "fiestabarbara.firebaseapp.com",
-      projectId: "fiestabarbara",
-      storageBucket: "fiestabarbara.firebasestorage.app",
-      messagingSenderId: "75513074857",
-      appId: "1:75513074857:web:2ac09043c23ae64175c5b8",
-      measurementId: "G-M2XPL4SQTT",
-    };
+ <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+  import {
+    getFirestore,
+    collection,
+    addDoc,
+  } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
 
-    const app2 = initializeApp(firebaseConfig2);
-    const db2 = getFirestore(app2);
+  const firebaseConfig2 = {
+    apiKey: "AIzaSyAw6CUWAMFJ35SIziP-0gpN06vRxkScI6k",
+    authDomain: "fiestabarbara.firebaseapp.com",
+    projectId: "fiestabarbara",
+    storageBucket: "fiestabarbara.firebasestorage.app",
+    messagingSenderId: "75513074857",
+    appId: "1:75513074857:web:2ac09043c23ae64175c5b8",
+    measurementId: "G-M2XPL4SQTT",
+  };
 
-    const formCanciones = document.getElementById("formCanciones");
+  const app2 = initializeApp(firebaseConfig2);
+  const db2 = getFirestore(app2);
 
-    formCanciones.addEventListener("submit", async (e) => {
-      e.preventDefault();
+  const formCanciones = document.getElementById("formCanciones");
 
-      const nombreCancion = document
-        .getElementById("nombreCancion")
-        .value.trim();
-      const autor = document.getElementById("autor").value.trim();
-      const enlace = document.getElementById("enlace").value.trim();
+  formCanciones.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-      if (!nombreCancion || !autor) {
-        Swal.fire({
-          icon: "warning",
-          title: "Faltan datos",
-          text: "Completá todos los campos antes de enviar.",
-          confirmButtonColor: "#0d1b3d",
-        });
-        return;
-      }
+    const nombreCancion = document.getElementById("nombreCancion").value.trim();
+    const autor = document.getElementById("autor").value.trim();
+    const enlace = document.getElementById("enlace").value.trim();
 
-      try {
-        await addDoc(collection(db2, "canciones"), {
-          nombreCancion,
-          autor,
-          enlace,
-          timestamp: new Date(),
-        });
+    if (!nombreCancion || !autor) {
+      Swal.fire({
+        icon: "warning",
+        title: "Faltan datos",
+        text: "Completá todos los campos antes de enviar.",
+        confirmButtonColor: "#0d1b3d",
+      });
+      return;
+    }
 
-        Swal.fire({
-          icon: "success",
-          title: "¡Enviado!",
-          text: "Gracias por sugerir una canción 🎶",
-          confirmButtonColor: "#0d1b3d",
-        });
-
-        formCanciones.reset();
-      } catch (error) {
-        console.error("Error al guardar en Firestore:", error);
-        Swal.fire({
-          icon: "error",
-          title: "Error",
-          text: "No se pudo enviar tu sugerencia. Intentá nuevamente.",
-          confirmButtonColor: "#dc3545",
-        });
-      }
+    // 🔄 Mostrar reloj de arena mientras carga
+    Swal.fire({
+      title: "Cargando...",
+      text: "Enviando sugerencia de canción",
+      allowOutsideClick: false,
+      showConfirmButton: false,
+      didOpen: () => {
+        Swal.showLoading(); // Reloj de arena animado
+      },
     });
-  </script>
+
+    try {
+      await addDoc(collection(db2, "canciones"), {
+        nombreCancion,
+        autor,
+        enlace,
+        timestamp: new Date(),
+      });
+
+      // ✅ Éxito - cerrar el reloj de arena y mostrar éxito breve
+      Swal.close(); // Cerrar el loading
+      Swal.fire({
+        icon: "success",
+        title: "¡Enviado!",
+        text: "Gracias por sugerir una canción 🎶",
+        showConfirmButton: false,
+        timer: 1000, // Se cierra solo en 1 segundo
+      });
+
+      formCanciones.reset();
+    } catch (error) {
+      console.error("Error al guardar en Firestore:", error);
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "No se pudo enviar tu sugerencia. Intentá nuevamente.",
+        confirmButtonColor: "#dc3545",
+      });
+    }
+  });
+</script>
 </html>
