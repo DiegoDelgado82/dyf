@@ -74,7 +74,22 @@ input[type="radio"].form-check-input {
   font-style: normal;
 }
 
+.boton-azul {
+  background-color: #0e1e3d;
+  color: white;
+  border: 2px solid #0e1e3d;
+  border-radius: 2rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-transform: uppercase;
+}
 
+.boton-azul:hover {
+  background-color: white;
+  color: #0e1e3d;
+}
 
 
 /* vietnamese */
